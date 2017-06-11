@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Volkhov);@import url(https://fonts.googleapis.com/css?family=Questrial);header {
+  width: 100%;
+  height: 150px;
+  background-color: #165ca9;
+  color: #fff;
+}
+header p {
+  font-size: 1.5em;
+  margin: 2em;
+  font-family: 'Questrial', serif;
+}
+html,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  margin: 1em 0;
+  font-family: 'Volkhov', sans-serif;
+}
+h2 {
+  font-size: 1.6em;
+  margin: 1em 0;
+}
+.block,
+.block:after,
+.block:before .block-group,
+.block-group:before,
+.block-group:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.block {
+  float: left;
+  width: 100%;
+}
+.block-group {
+  *zoom: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .block-group {
+    width: 992px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .block-group {
+    width: 1200px;
+  }
+}
+.block-group:before,
+.block-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.block-group:after {
+  clear: both;
+}
+.block-group > .block-group {
+  clear: none;
+  float: left;
+  margin: 0 !important;
+}

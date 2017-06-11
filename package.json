@@ -1,0 +1,43 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "Front End JS App for Drupal Blog Articles",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js",
+    "build": "webpack",
+    "watch": "webpack -d --watch"
+  },
+  "author": "Rick Bergmann",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "latest",
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-react": "latest",
+    "browser-sync": "latest",
+    "browser-sync-webpack-plugin": "latest",
+    "browsersync": "0.0.1-security",
+    "bs-html-injector": "^3.0.3",
+    "css-loader": "latest",
+    "ejs": "latest",
+    "ejs-compiled-loader": "latest",
+    "ejs-webpack-builder": "latest",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "latest",
+    "less": "latest",
+    "less-loader": "latest",
+    "path": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "requirejs": "latest",
+    "style-loader": "latest",
+    "webpack": "latest"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}

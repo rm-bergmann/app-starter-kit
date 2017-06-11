@@ -1,0 +1,144 @@
+// This file will define the form components namespace:
+// Declare sets of re-usable styles to be used on form components
+
+// Currently this is a test on 2 nodes. After the test the body class should be removed and the styles should become default.
+// If you see this message please chase it up (ticket no: FE-1430)
+
+#form {
+
+  .text-input() {
+    width: 100%;
+    border-radius: 6px;
+    height: 38px;
+    padding: 4px;
+    color: #000;
+    font-size: 1.4em;
+    background-color: #fafafa;
+    #display.border(2px, #ddd);
+
+    &:focus, &:active {
+      border-radius: 6px;
+    }
+  }
+
+  .select() {
+    font-size: 22px;
+    line-height: 1.4;
+    width: 100%;
+    display: block;
+    padding: .4em;
+    background: #fafafa url('images/select-icon-scroll.svg') no-repeat right 10px center;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    #display.border(1px, #c8c8c8);
+  }
+
+  .checkbox-radio() {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    display: block;
+    content: '';
+    background: #fff;
+
+    .lt-ie9 & {
+      display: none;
+    }
+  }
+
+  .radio() {
+    // radios buttons are rounded
+    // and a bit wider to compensate
+    // optical size difference
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #fff inset,
+                0 0 0 5px currentcolor inset,
+                0 0 0 1px currentcolor,
+                0 0 0 2px #ccc;
+  }
+
+  .checkbox() {
+    // checkboxes are squared
+    // and a bit smaller
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
+    border: 3px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px currentcolor inset,
+                0 0 0 1px currentcolor,
+                0 0 0 2px #ccc;
+  }
+
+  .button() {
+    font-size: 1.4em;
+    width: 100%;
+    padding: .5em .8em .7em .8em;
+    white-space: normal;
+    color: #fff;
+    border: 2px solid hsl(0, 84%, 40%);
+    border-radius: .2em;
+    background: @col-2;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #f03232;
+    }
+
+    @media @min-tablet {
+      padding: .5em .8em;
+    }
+  }
+
+  .back-button(@col: #337ab7) {
+    padding-left: 20px;
+    background: transparent url('images/round-arrow-left.png') no-repeat 0 3px;
+    color: @col;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 90px;
+  }
+
+  // Allow mixins with same name to behave differently:
+  // We want either the border variation or the shadow variation but not both and we want the background in both
+
+  .visual-validation(shadow; @col; @bg) {
+    box-shadow: 0 0 0 2px @col inset;
+  }
+
+  .visual-validation(border; @col; @bg) {
+    #display.border(2px, @col);
+  }
+
+  .visual-validation(@_; @col; @bg) {
+    background: @bg url('http://images.webforms.mvfglobal.com/cro/b2c/CC_PPC_001/tick-green.png') no-repeat 98% center;
+  }
+
+  // Use this function to dipslay Labels inline with the text fields when screensize > 460px
+  .inline-fields() {
+
+    @media @custom-02 {
+      label {
+        width: 30%;
+        float: left;
+      }
+
+      input {
+        &[type="text"],
+        &[type="tel"],
+        &[type="email"] {
+          width: 68%;
+          float: right;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

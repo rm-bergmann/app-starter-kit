@@ -1,0 +1,13 @@
+#font {
+
+  .type() when (default()) {
+    font-family: @font-sans, sans-serif;
+  }
+  
+  .type(@type) when (@type = serif) {
+    font-family: @font-serif, serif;
+  }
+}
+
+@font-sans:  'Volkhov';
+@font-serif: 'Questrial';
