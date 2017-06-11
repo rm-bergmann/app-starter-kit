@@ -1,0 +1,23 @@
+#main-nav {
+  background: @grey-light;
+  padding: 1em 0;
+  
+  ul {
+    #display.clearfix();
+    
+    li {
+      #display.grid(10%, 5%);
+      #font.type(serif);
+      
+      &:first-of-type {
+        margin-left: 0;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 1.4em;
+        display: block;
+      }
+    }
+  }
+}

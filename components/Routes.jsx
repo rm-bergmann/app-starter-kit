@@ -11,9 +11,9 @@ const Routes = () => (
   <Router>
     <div className="block-group">
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
+        <li className="block"><Link to="/">Home</Link></li>
+        <li className="block"><Link to="/about">About</Link></li>
+        <li className="block"><Link to="/blog">Blog</Link></li>
       </ul>
 
       <Route path="/" component={Home} />
@@ -24,7 +24,6 @@ const Routes = () => (
 )
 
 export default Routes;
-
 
 ReactDOM.render((
   <Routes />

@@ -1,15 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Volkhov);@import url(https://fonts.googleapis.com/css?family=Questrial);header {
-  width: 100%;
-  height: 150px;
-  background-color: #165ca9;
-  color: #fff;
-}
-header p {
-  font-size: 1.5em;
-  margin: 2em;
-  font-family: 'Questrial', serif;
-}
-html,
+@import url(https://fonts.googleapis.com/css?family=Volkhov);@import url(https://fonts.googleapis.com/css?family=Questrial);html,
 div,
 span,
 applet,
@@ -141,6 +130,42 @@ p {
 h2 {
   font-size: 1.6em;
   margin: 1em 0;
+}
+header {
+  width: 100%;
+  height: 150px;
+  background-color: #165ca9;
+  color: #fff;
+}
+header p {
+  font-size: 1.5em;
+  margin: 2em;
+  font-family: 'Questrial', serif;
+}
+#main-nav {
+  background: #f2f3f2;
+  padding: 1em 0;
+}
+#main-nav ul:before,
+#main-nav ul:after {
+  content: " ";
+  display: table;
+}
+#main-nav ul:after {
+  clear: both;
+}
+#main-nav ul li {
+  width: 10%;
+  margin-left: 5%;
+  font-family: 'Questrial', serif;
+}
+#main-nav ul li:first-of-type {
+  margin-left: 0;
+}
+#main-nav ul li a {
+  text-decoration: none;
+  font-size: 1.4em;
+  display: block;
 }
 .block,
 .block:after,
