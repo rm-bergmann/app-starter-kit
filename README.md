@@ -1,7 +1,7 @@
 # React App Starter Kit
 
-* This is a simple React App starter kit with the essential dependencies that I would use for development,
-* all set up the way I like.
+This is a simple React App starter kit with the essential dependencies that I would use for development,
+all set up the way I like.
 
 I have included settings for server side rendering, but currently it doesn't work well with webpack.
 This is becuase when webpack compiles the JS file node_modules is excluded (as it should be), but there is an issue
