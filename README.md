@@ -14,4 +14,9 @@ I am working on a solution, but so far everything I tried has not worked.
 * React, React Router, Axios
 * Webpack, Babel-loader, Less-loader
 * Express JS, EJS
-* LESS 
+* LESS
+
+## LESS
+
+I set up LESS so it's namespaced with groups of re-usable mixins. This makes development time a lot faster for me.
+Can be used accross all projects but each project will have some additional unique mixins specific for the project.

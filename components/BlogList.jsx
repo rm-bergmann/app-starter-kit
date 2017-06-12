@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-class Blogs extends React.Component {
+class BlogList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,11 +17,11 @@ class Blogs extends React.Component {
     {
       /* 
        * Enter the required URL to retrieve a json object
-       * Current: http://blog.dev/blogs
+       * Current: http://blog.dev/blog
        */
     }
 
-    axios.get('http://blog.dev/blogs').then(data => {
+    axios.get('http://blog.dev/blog').then(data => {
       var component = this;
       component.setState({
         list: data.data,
@@ -58,4 +58,4 @@ class Blogs extends React.Component {
   }
 }
 
-export default Blogs;
+export default BlogList;
