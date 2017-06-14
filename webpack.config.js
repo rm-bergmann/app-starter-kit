@@ -3,7 +3,7 @@ const path    = require('path');
 // const fs      = require('fs');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
-const COMP_DIR  = path.resolve(__dirname, 'components');
+const COMP_DIR  = path.resolve(__dirname, './src/components');
 
 const BrowserSync       = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
