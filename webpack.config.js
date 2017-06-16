@@ -45,7 +45,7 @@ var options = {
 
 const config = {
   // entry: './app.js',
-  entry: COMP_DIR + '/main.jsx',
+  entry: COMP_DIR + '/Index.jsx',
   // target: 'node',
 
   output: {
@@ -82,7 +82,10 @@ const config = {
           {
             use: [
               {
-                loader: 'css-loader'
+                loader: 'css-loader',
+                options: {
+                  minimize: true
+                }
               },
               {
                 loader: 'less-loader'

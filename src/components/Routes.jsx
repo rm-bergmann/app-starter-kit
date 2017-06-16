@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
-import {BrowserRouter as Router, Route, Link, StaticRouter, Switch, matchPath } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, StaticRouter, Switch, browserHistory } from 'react-router-dom';
 
-import Home     from './Home.jsx';
-import About    from './About.jsx';
+import Home  from './Home.jsx';
+import About from './About.jsx';
 import BlogList from './BlogList.jsx';
 
 const Routes = () => (
@@ -26,6 +26,6 @@ const Routes = () => (
 
 export default Routes;
 
-ReactDOM.render((
+render((
   <Routes />
 ), document.getElementById('main-nav'))
