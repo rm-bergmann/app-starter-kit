@@ -12083,13 +12083,10 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom_server__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dom_server__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Home_jsx__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__About_jsx__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__BlogList_jsx__ = __webpack_require__(130);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Home_jsx__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__About_jsx__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__BlogList_jsx__ = __webpack_require__(130);
 
 
 
@@ -12100,7 +12097,7 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
 
 var Routes = function Routes() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["a" /* BrowserRouter */],
+    __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["a" /* BrowserRouter */],
     null,
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
@@ -12112,7 +12109,7 @@ var Routes = function Routes() {
           'li',
           { className: 'block' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Link */],
+            __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
             { to: '/' },
             'Home'
           )
@@ -12121,7 +12118,7 @@ var Routes = function Routes() {
           'li',
           { className: 'block' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Link */],
+            __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
             { to: '/about' },
             'About'
           )
@@ -12130,18 +12127,18 @@ var Routes = function Routes() {
           'li',
           { className: 'block' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["b" /* Link */],
+            __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["b" /* Link */],
             { to: '/blog' },
             'Blog'
           )
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3_react_router_dom__["c" /* Switch */],
+        __WEBPACK_IMPORTED_MODULE_2_react_router_dom__["c" /* Switch */],
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["d" /* Route */], { exact: true, path: '/', component: __WEBPACK_IMPORTED_MODULE_4__Home_jsx__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["d" /* Route */], { path: '/about', component: __WEBPACK_IMPORTED_MODULE_5__About_jsx__["a" /* default */] }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_router_dom__["d" /* Route */], { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_6__BlogList_jsx__["a" /* default */] })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Route */], { exact: true, path: '/', component: __WEBPACK_IMPORTED_MODULE_3__Home_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Route */], { path: '/about', component: __WEBPACK_IMPORTED_MODULE_4__About_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_router_dom__["d" /* Route */], { path: '/blog', component: __WEBPACK_IMPORTED_MODULE_5__BlogList_jsx__["a" /* default */] })
       )
     )
   );
@@ -12149,7 +12146,7 @@ var Routes = function Routes() {
 
 /* unused harmony default export */ var _unused_webpack_default_export = (Routes);
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Routes, null), document.getElementById('main-nav'));
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Routes, null), document.getElementById('main-nav'));
 
 /***/ }),
 /* 110 */
@@ -19707,37 +19704,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 177 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-
-
-var ReactDefaultInjection = __webpack_require__(83);
-var ReactServerRendering = __webpack_require__(195);
-var ReactVersion = __webpack_require__(93);
-
-ReactDefaultInjection.inject();
-
-var ReactDOMServer = {
-  renderToString: ReactServerRendering.renderToString,
-  renderToStaticMarkup: ReactServerRendering.renderToStaticMarkup,
-  version: ReactVersion
-};
-
-module.exports = ReactDOMServer;
-
-/***/ }),
+/* 177 */,
 /* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21908,129 +21875,8 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2014-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-
-
-var ReactServerBatchingStrategy = {
-  isBatchingUpdates: false,
-  batchedUpdates: function (callback) {
-    // Don't do anything here. During the server rendering we don't want to
-    // schedule any updates. We will simply ignore them.
-  }
-};
-
-module.exports = ReactServerBatchingStrategy;
-
-/***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/**
- * Copyright 2013-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- *
- */
-
-
-var _prodInvariant = __webpack_require__(3);
-
-var React = __webpack_require__(20);
-var ReactDOMContainerInfo = __webpack_require__(80);
-var ReactDefaultBatchingStrategy = __webpack_require__(82);
-var ReactInstrumentation = __webpack_require__(8);
-var ReactMarkupChecksum = __webpack_require__(88);
-var ReactReconciler = __webpack_require__(19);
-var ReactServerBatchingStrategy = __webpack_require__(194);
-var ReactServerRenderingTransaction = __webpack_require__(92);
-var ReactUpdates = __webpack_require__(14);
-
-var emptyObject = __webpack_require__(24);
-var instantiateReactComponent = __webpack_require__(57);
-var invariant = __webpack_require__(1);
-
-var pendingTransactions = 0;
-
-/**
- * @param {ReactElement} element
- * @return {string} the HTML markup
- */
-function renderToStringImpl(element, makeStaticMarkup) {
-  var transaction;
-  try {
-    ReactUpdates.injection.injectBatchingStrategy(ReactServerBatchingStrategy);
-
-    transaction = ReactServerRenderingTransaction.getPooled(makeStaticMarkup);
-
-    pendingTransactions++;
-
-    return transaction.perform(function () {
-      var componentInstance = instantiateReactComponent(element, true);
-      var markup = ReactReconciler.mountComponent(componentInstance, transaction, null, ReactDOMContainerInfo(), emptyObject, 0 /* parentDebugID */
-      );
-      if (process.env.NODE_ENV !== 'production') {
-        ReactInstrumentation.debugTool.onUnmountComponent(componentInstance._debugID);
-      }
-      if (!makeStaticMarkup) {
-        markup = ReactMarkupChecksum.addChecksumToMarkup(markup);
-      }
-      return markup;
-    }, null);
-  } finally {
-    pendingTransactions--;
-    ReactServerRenderingTransaction.release(transaction);
-    // Revert to the DOM batching strategy since these two renderers
-    // currently share these stateful modules.
-    if (!pendingTransactions) {
-      ReactUpdates.injection.injectBatchingStrategy(ReactDefaultBatchingStrategy);
-    }
-  }
-}
-
-/**
- * Render a ReactElement to its initial HTML. This should only be used on the
- * server.
- * See https://facebook.github.io/react/docs/top-level-api.html#reactdomserver.rendertostring
- */
-function renderToString(element) {
-  !React.isValidElement(element) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'renderToString(): You must pass a valid ReactElement.') : _prodInvariant('46') : void 0;
-  return renderToStringImpl(element, false);
-}
-
-/**
- * Similar to renderToString, except this doesn't create extra DOM attributes
- * such as data-react-id that React uses internally.
- * See https://facebook.github.io/react/docs/top-level-api.html#reactdomserver.rendertostaticmarkup
- */
-function renderToStaticMarkup(element) {
-  !React.isValidElement(element) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'renderToStaticMarkup(): You must pass a valid ReactElement.') : _prodInvariant('47') : void 0;
-  return renderToStringImpl(element, true);
-}
-
-module.exports = {
-  renderToString: renderToString,
-  renderToStaticMarkup: renderToStaticMarkup
-};
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
+/* 194 */,
+/* 195 */,
 /* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24172,16 +24018,7 @@ var ReactMount = __webpack_require__(89);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(177);
-
-
-/***/ }),
+/* 221 */,
 /* 222 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
