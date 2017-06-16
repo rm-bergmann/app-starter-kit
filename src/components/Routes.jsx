@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import ReactDOMServer from 'react-dom/server';
-import {BrowserRouter as Router, Route, Link, StaticRouter, Switch, browserHistory } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, StaticRouter, Switch } from 'react-router-dom';
 
 import Home  from './Home.jsx';
 import About from './About.jsx';
