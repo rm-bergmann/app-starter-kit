@@ -11801,7 +11801,9 @@ var Routes = function Routes() {
 exports.default = Routes;
 
 
-(0, _reactDom.render)(_react2.default.createElement(Routes, null), document.getElementById('main-nav'));
+if (typeof window !== 'undefined') {
+  (0, _reactDom.render)(_react2.default.createElement(Routes, null), document.getElementById('main-nav'));
+}
 
 /***/ }),
 /* 104 */

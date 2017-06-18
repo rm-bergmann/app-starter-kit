@@ -2,12 +2,12 @@ const express = require('express');
 const port    = process.env.PORT || 3000;
 const app     = express();
 
-const React = require('react');
+// const React = require('react');
 // const ReactDOMServer = require('react-dom/server');
 
-import { renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
-const routes = require('./src/components/Routes.jsx').routes;
+//import { renderToString } from 'react-dom/server';
+//import { match, RouterContext } from 'react-router';
+//const routes = require('./src/components/Routes.jsx').routes;
 
 //const request  = require('request');
 //const blogData = 'http://blog.dev/blog';
