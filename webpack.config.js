@@ -28,7 +28,7 @@
 
 const webpack = require('webpack');
 const path    = require('path');
-// const fs      = require('fs');
+const fs      = require('fs');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const COMP_DIR  = path.resolve(__dirname, './src/components');
@@ -65,6 +65,8 @@ new webpack.DefinePlugin({
   }
 });
 
+*/
+
 var options = {
   files: ['./src/views/index.ejs'],
   target: {
@@ -72,12 +74,27 @@ var options = {
     dir: 'public'
   }
 };
-*/
+
 
 const config = {
-  // entry: './app.js',              // For Server Side
-  entry: COMP_DIR + '/Index.jsx',   // For Client Side
-  // target: 'node',
+  entry: path.resolve(__dirname, 'app.js'),              // For Server Side
+  // entry: COMP_DIR + '/Index.jsx',   // For Client Side
+  target: 'node',
+  externals: fs.readdirSync(path.resolve(__dirname, 'node_modules'))
+  .concat(
+    [
+      'react-dom/server', 'react/addons',
+    ]
+  )
+  .reduce(function (ext, mod) {
+    ext[mod] = 'commonjs ' + mod;
+    return ext;
+  }, {}),
+
+  node: {
+    __filename: true,
+    __dirname: true
+  },
 
   output: {
     path: BUILD_DIR,
@@ -92,7 +109,7 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader?presets[]=es2015&presets[]=react'
       }
     ],
 
@@ -158,18 +175,12 @@ const config = {
         // files: ['../views/*.ejs']
       }
     ),
-    
-    /*
-    new StatsPlugin('stats.json', {
-      chunkModules: true,
-      exclude: [/node_modules/]
-    }),
-    */
+      
     
     // new webpack.HotModuleReplacementPlugin(),
     // new webpack.NoEmitOnErrorsPlugin(),
     
-    extractLess
+    extractLess,
     
     /*
     new webpack.optimize.UglifyJsPlugin({
@@ -187,7 +198,7 @@ const config = {
     })
     */
     
-   // new ejsBuilder(options)
+    new ejsBuilder(options)
   ]
 };
 

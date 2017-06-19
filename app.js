@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 // serve static assets normally
 app.use(express.static(__dirname + '/public'));
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
 
  // match({routes: routes, location: req.url}, function(error, redirectLocation, renderProps) {
     res.render('index',
@@ -34,24 +34,24 @@ app.get('*', function(req, res) {
  // });
 });
 
+
 /*
- 
 var ComponentFactory = React.createFactory(BlogList);
 app.get('/blog', function (req, res) {
   var markup = ReactDOMServer.renderToString(ComponentFactory());
   res.send(markup);
 });
-
+*/
 
 app.get('/about', function (req, res) {
-  res.render('index',
-    {
-      query : req.query,
-      title : 'About Page'
-    }
-  );
+  res.send('<h1>About Page</h1>');
 });
 
+app.get('/about/:name?/:title?', function(req, res) {
+  var name = req.params.name;
+  var title = req.params.title;
+  res.send('<h1>' + name + '</h1>' + title);
+});
 
 
 app.get('/blog/:id?', function (req, res) {
@@ -63,7 +63,7 @@ app.get('*', function(req, res) {
   res.send('404 Not found');
 });
 
-*/
+
 app.listen(port);
 console.log('server started on port ' + port);
 

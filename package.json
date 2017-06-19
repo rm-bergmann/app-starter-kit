@@ -7,7 +7,7 @@
     "test": "test",
     "start": "nodemon app.js --exec babel-node",
     "build": "webpack",
-    "watch": "webpack -d --watch"     
+    "watch": "webpack -d --watch"
   },
   "author": "Rick Bergmann",
   "license": "ISC",
