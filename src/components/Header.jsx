@@ -5,7 +5,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className="block-group">
-        <p>Header</p>
+        <h2>Cool Logo</h2>
       </div>
     );
   }
