@@ -11,9 +11,9 @@ const Routes = () => (
     <div>
       <nav>
         <ul className="block-group">
-          <li className="block"><Link to="/">Home</Link></li>
-          <li className="block"><Link to="/about">About</Link></li>
-          <li className="block"><Link to="/blog">Blog</Link></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
         </ul>
       </nav>
       <Route exact path="/" component={Home} />

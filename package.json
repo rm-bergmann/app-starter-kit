@@ -26,7 +26,6 @@
     "ejs-compiled-loader": "latest",
     "ejs-webpack-builder": "latest",
     "extract-text-webpack-plugin": "^2.1.2",
-    "html-webpack-plugin": "latest",
     "less": "latest",
     "less-loader": "latest",
     "path": "latest",
@@ -35,7 +34,7 @@
     "react-router-dom": "latest",
     "requirejs": "latest",
     "style-loader": "latest",
-    "webpack": "latest"
+    "webpack": "^3.0.0"
   },
   "dependencies": {
     "express": "latest"
