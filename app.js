@@ -2,10 +2,11 @@ const express = require('express');
 const port    = process.env.PORT || 3000;
 const app     = express();
 
-// const React = require('react');
-// const ReactDOMServer = require('react-dom/server');
+const React    = require('react');
+const ReactDOM = require('react-dom/server');
 
-//import { renderToString } from 'react-dom/server';
+const Home = require('./src/components/Home.jsx');
+
 //import { match, RouterContext } from 'react-router';
 //const routes = require('./src/components/Routes.jsx').routes;
 
@@ -24,14 +25,13 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
 
- // match({routes: routes, location: req.url}, function(error, redirectLocation, renderProps) {
-    res.render('index',
-      {
-        query : req.query,
-        title : 'Home Page'
-      }
-    );
- // });
+  res.render('index',
+    {
+      React: ReactDOM.renderToString(<Home />),
+      query : req.query,
+      title : 'Home Page'
+    }
+  );
 });
 
 
