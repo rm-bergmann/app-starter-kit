@@ -5,8 +5,6 @@ const app     = express();
 const React    = require('react');
 const ReactDOM = require('react-dom/server');
 
-const Home = require('./src/components/Home.jsx');
-
 //import { match, RouterContext } from 'react-router';
 //const routes = require('./src/components/Routes.jsx').routes;
 
@@ -16,6 +14,9 @@ const Home = require('./src/components/Home.jsx');
 //const ReactDOMServer = require('react-dom/server');
 //const BlogList       = require('./src/components/BlogList.jsx');
 
+require('babel-core/register')({
+  presets: ['react']
+});
 
 app.set('views', __dirname + '/src/views');
 app.set('view engine', 'ejs');
@@ -24,13 +25,16 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
+  
+  const Home   = require('./src/components/Home.jsx');
+  const output = ReactDOM.renderToString(React.createFactory(Home));
 
   res.render('index',
     {
-      React: ReactDOM.renderToString(<Home />),
       query : req.query,
       title : 'Home Page'
-    }
+    },
+    output
   );
 });
 
