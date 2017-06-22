@@ -44,13 +44,11 @@ class BlogList extends React.Component {
     }
     
     return (
-      <div>     
+      <div className={'content'}>     
         {this.state.list.map(e => (
-          <div className={'blog-list'}> 
-            <h3 key={e.title}>{e.title}</h3>
-
+          <div className={'blog-list block-group'}> 
+            <h1 key={e.title}>{e.title}</h1>
             <div dangerouslySetInnerHTML={{__html: e.body}} key={e.body}></div>
-            <img src={e.image} alt={e.title} key={e.image}></img>
           </div>
         ))}
       </div>

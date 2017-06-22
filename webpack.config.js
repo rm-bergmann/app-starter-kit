@@ -28,7 +28,7 @@
 
 const webpack = require('webpack');
 const path    = require('path');
-const fs      = require('fs');
+// const fs      = require('fs');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const COMP_DIR  = path.resolve(__dirname, './src/components');
@@ -46,7 +46,7 @@ const extractLess = new ExtractTextPlugin({
 // const hostname = 'localhost';
 const hostname = '192.168.56.101';
 
-const ejsBuilder  = require('ejs-webpack-builder');
+// const ejsBuilder  = require('ejs-webpack-builder');
 
 /*
 let nodeModules = {};
@@ -77,24 +77,24 @@ var options = {
 
 
 const config = {
-  entry: path.resolve(__dirname, 'app.js'),              // For Server Side
-  // entry: COMP_DIR + '/Index.jsx',   // For Client Side
-  target: 'node',
-  externals: fs.readdirSync(path.resolve(__dirname, 'node_modules'))
-  .concat(
-    [
-      'react-dom/server', 'react/addons',
-    ]
-  )
-  .reduce(function (ext, mod) {
-    ext[mod] = 'commonjs ' + mod;
-    return ext;
-  }, {}),
+  // entry: path.resolve(__dirname, 'app.js'),     // For Server Side
+  entry: COMP_DIR + '/Index.jsx',   // For Client Side
+  // target: 'node',
+  // externals: fs.readdirSync(path.resolve(__dirname, 'node_modules'))
+  // .concat(
+  //  [
+  //   'react-dom/server', 'react/addons',
+  //  ]
+  // )
+  // .reduce(function (ext, mod) {
+  //  ext[mod] = 'commonjs ' + mod;
+  //  return ext;
+  // }, {}),
 
-  node: {
-    __filename: true,
-    __dirname: true
-  },
+  // node: {
+  //  __filename: true,
+  //  __dirname: true
+  // },
 
   output: {
     path: BUILD_DIR,
@@ -198,7 +198,7 @@ const config = {
     })
     */
     
-    new ejsBuilder(options)
+    // new ejsBuilder(options)
   ]
 };
 
