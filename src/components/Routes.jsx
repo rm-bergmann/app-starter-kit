@@ -25,7 +25,8 @@ const Routes = () => (
 
 export default Routes;
 
-
-render((
-  <Routes />
-), document.getElementById('container'))
+if(typeof window !== 'undefined') {
+  render((
+    <Routes />
+  ), document.getElementById('container'))
+}

@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "test",
-    "start": "node app.js",
+    "start": "nodemon app.js --exec babel-node",
     "build": "webpack",
     "watch": "webpack -d --watch"
   },
@@ -13,10 +13,14 @@
   "license": "ISC",
   "devDependencies": {
     "axios": "latest",
+    "babel-cli": "^6.24.1",
     "babel-core": "latest",
     "babel-loader": "latest",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
     "browser-sync": "latest",
     "browser-sync-webpack-plugin": "latest",
     "browsersync": "0.0.1-security",
@@ -28,6 +32,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "less": "latest",
     "less-loader": "latest",
+    "nodemon": "^1.11.0",
     "path": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -37,6 +42,7 @@
     "webpack": "^3.0.0"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "request": "^2.81.0"
   }
 }
