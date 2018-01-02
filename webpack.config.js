@@ -107,7 +107,7 @@ const config = {
   plugins: [
     new BrowserSync (
       {
-        host: '192.168.56.101',
+        host: '127.0.0.1',
         port: 3000,
         open: false,
         // reload: false,

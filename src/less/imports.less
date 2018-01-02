@@ -1,31 +1,25 @@
 // Global Import:
 
-// Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Volkhov');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
-
 // LESS is a Declarative Language, which means we can import variables
 // anywhere, they don't have to be declared at the top.
 // variables.less will be available in all files imported from this file.
 
 @import 'variables';
 
-
 // All default styling, browser reset
-@import './body/body';
+@import './body/base';
 
-// Import all main body componenets. Eg: Header, Navigation, Footer etc
-@import './body/header';
-@import './body/nav';
+@import './libs/grid';
+
+// Import componenets. Eg: Header, Navigation, Footer etc
+@import './components/header';
+@import './components/nav';
+
 @import './body/content';
 
-// Componenets are all namespaced, and declared as functions
+// Mixins are all namespaced, and declared as functions
 // so that the styles don't print in the stylesheet unless they
 // are called. Call the functions like #namespace.mixin-name(@param-value);
 
-@import 'components/grid';
-@import 'components/dev';
-@import 'components/titles';
-@import 'components/font';
-@import 'components/display';
+@import './mixins/z-mixin-imports';
 
