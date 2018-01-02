@@ -44,7 +44,7 @@ const extractLess = new ExtractTextPlugin({
 // Replace the IP address with localhost if you use localhost
 // Or add your IP Address if you use a Virtual Machine
 // const hostname = 'localhost';
-const hostname = '192.168.56.101';
+const hostname = '127.0.0.1';
 
 // const ejsBuilder  = require('ejs-webpack-builder');
 
