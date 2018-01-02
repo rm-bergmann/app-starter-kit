@@ -3,15 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Blog</title>
+    <title><%= title %></title>
     <link href="/style.css" type="text/css" rel="stylesheet" />
     <base href="/" />
   </head>
   <body>
     <header id="header"></header>
-    <nav id="main-nav"></nav>
-    <div id="blogs"></div>
-    <div id="container"></div>
+    
+    <nav id="main-nav">
+      <ul class="block-group">
+        <li class="block"><a href="/">Home</a></li>
+        <li class="block"><a href="/about">About</a></li>
+        <li class="block"><a href="/blog">Blog</a></li>
+      </ul>  
+    </nav>
+    
+    <div id="blogs">
+      
+    </div>
+    
+    <% if (query == 'about') { %>
+      <div id="content">
+       TEST
+      </div>
+    <% } %>
+    
     <script src="/bundle.js"></script>
   </body>
 </html>
