@@ -28,13 +28,14 @@
 
 const webpack = require('webpack');
 const path    = require('path');
-// const fs      = require('fs');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
 const COMP_DIR  = path.resolve(__dirname, './src/components');
 
 const BrowserSync       = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const historyApiFallback = require('connect-history-api-fallback');
 
 const extractLess = new ExtractTextPlugin({
   filename: 'style.css',
@@ -46,60 +47,12 @@ const extractLess = new ExtractTextPlugin({
 // const hostname = 'localhost';
 const hostname = '127.0.0.1';
 
-// const ejsBuilder  = require('ejs-webpack-builder');
-
-/*
-let nodeModules = {};
-
-fs.readdirSync('node_modules')
-.filter(function(x) {
-  return ['.bin'].indexOf(x) === -1;
-})
-.forEach(function(mod) {
-  nodeModules[mod] = 'commonjs' + mod;
-});
-
-new webpack.DefinePlugin({
-  'process.env': {
-    NODE_ENV: JSON.stringify('development')
-  }
-});
-
-*/
-
-var options = {
-  files: ['./src/views/index.ejs'],
-  target: {
-    name: 'index.html',
-    dir: 'public'
-  }
-};
-
-
 const config = {
-  // entry: path.resolve(__dirname, 'app.js'),     // For Server Side
   entry: COMP_DIR + '/Index.jsx',   // For Client Side
-  // target: 'node',
-  // externals: fs.readdirSync(path.resolve(__dirname, 'node_modules'))
-  // .concat(
-  //  [
-  //   'react-dom/server', 'react/addons',
-  //  ]
-  // )
-  // .reduce(function (ext, mod) {
-  //  ext[mod] = 'commonjs ' + mod;
-  //  return ext;
-  // }, {}),
-
-  // node: {
-  //  __filename: true,
-  //  __dirname: true
-  // },
 
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'
-    // libraryTarget: 'commonjs2'
   },
     
  devtool: 'source-map',
@@ -145,21 +98,15 @@ const config = {
     ]
   },
   
-  /*
-  externals: {
-    nodeModules,
-  },
-  */
-
   plugins: [
     new BrowserSync (
       {
         host: hostname,
         port: 3000,
         open: false,
-        // reload: false,
         server: {
-          baseDir: [BUILD_DIR]
+          baseDir: [BUILD_DIR],
+          middleware: [historyApiFallback()]
         },
         files: [
           '*.css'
@@ -172,33 +119,14 @@ const config = {
             }
           }
         ]
-        // files: ['../views/*.ejs']
       }
     ),
-      
     
     // new webpack.HotModuleReplacementPlugin(),
     // new webpack.NoEmitOnErrorsPlugin(),
     
     extractLess,
     
-    /*
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      output: {
-        comments: false
-      }
-    }),
-    
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      filename: 'vendor.bundle.js'
-    })
-    */
-    
-    // new ejsBuilder(options)
   ]
 };
 
