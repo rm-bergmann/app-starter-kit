@@ -14,14 +14,7 @@ class BlogList extends React.Component {
   
   componentDidMount() {
     
-    {
-      /* 
-       * Enter the required URL to retrieve a json object
-       * Current: http://blog.dev/blog
-       */
-    }
-
-    axios.get('http://blog.dev/blog').then(data => {
+    axios.get('https://jsonplaceholder.typicode.com/posts').then(data => {
       var component = this;
       component.setState({
         list: data.data,
@@ -34,21 +27,12 @@ class BlogList extends React.Component {
   }
 
   render() {
-    
-    {
-      /*
-       * To render HTML React forces dangerouslySetInnerHTML={{__html}} syntax
-       * so that you don't accidentally render text as HTML.
-       * This prevents XSS bugs
-       */
-    }
-    
     return (
       <div className={'content'}>     
         {this.state.list.map(e => (
-          <div className={'blog-list block-group'}> 
+          <div> 
             <h1 key={e.title}>{e.title}</h1>
-            <div dangerouslySetInnerHTML={{__html: e.body}} key={e.body}></div>
+            <div key={e.body}>{e.body}</div>
           </div>
         ))}
       </div>

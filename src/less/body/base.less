@@ -29,18 +29,20 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+	
+	&:before,
+	&:after {
+		content: '';
+		content: none;
+	}
 }
 
 table {
@@ -54,7 +56,7 @@ p {
 }
 
 h1 {
-	font-size: 2.6em;
+	font-size: 2em;
 }
 
 h2 {

@@ -1,20 +1,31 @@
 # React App Starter Kit
 
-This is a simple React App starter kit with the essential dependencies that I would use for development,
-all set up the way I like.
+This is a simple React App starter kit with the essential dependencies that I would use for development.
+After experimenting with Create React App, I thought it was really good, but missing a few things, so I
+have created something similar, but with a few extra's. I have also included my LESS mixin library, I will
+list the available mixins for use.
 
-I have included settings for server side rendering, but currently it doesn't work well with webpack.
-This is because when webpack compiles the JS file node_modules is excluded (as it should be), but there is an issue
-with a common js dependency that causes an error in the compiled JS file, something like exports is not defined.
-I am working on a solution, but so far everything I tried has not worked.
+## Installation:
+
+* $ git Clone
+* $ npm install
+* $ npm start     : Development Mode (localhost:8080) with browsersync (localhost:3000)
+* $ npm run build : Bundles / minifies files for production
+* $ npm test      : Runs unit tests
 
 ## Dependencies:
 
 * Node, NPM
-* React, React Router, Axios
-* Webpack, Babel-loader, Less-loader
-* Express JS, EJS
-* LESS
+* React, React Router, React Router Dom
+* Redux, Redux Dev Tools, React Redux
+* Axios
+* Webpack, Webpack-Dev-Server
+* Express JS
+* Babel-loader
+* Less-loader, Post CSS Loader, CSS Loader
+* Jest
+* ES Lint
+* Nodemon
 
 ## LESS
 
@@ -23,14 +34,7 @@ Can be used accross all projects but each project will have some additional uniq
 
 ## Pocketgrid
 
-I use PocketGrid for my grid work because it is tiny and I like it because of it's flexibilty with columns and sizes.
+PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
+for columns. I have included a mixin for the block elements.
 
-# Installation:
 
-* Checkout Repo
-* $ npm install
-* $ npm start
-
-## For webpack / development / browsersync
-
-* $ webpack --watch
