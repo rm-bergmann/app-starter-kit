@@ -1,19 +1,19 @@
 import React from 'react';
-import {render} from 'react-dom';
-import {BrowserRouter as Router, Route, Link, StaticRouter } from 'react-router-dom';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import Home  from './Home.jsx';
-import About from './About.jsx';
-import BlogList from './BlogList.jsx';
+import Home from './Home';
+import About from './About';
+import BlogList from './BlogList';
 
 const Routes = () => (
   <Router>
     <div>
       <nav>
         <ul className="block-group">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
+          <li><Link href="/" to={Home}>Home</Link></li>
+          <li><Link href="/about" to={About}>About</Link></li>
+          <li><Link href="/blog" to={BlogList}>Blog</Link></li>
         </ul>
       </nav>
       <Route exact path="/" component={Home} />
@@ -21,12 +21,14 @@ const Routes = () => (
       <Route path="/blog" component={BlogList} />
     </div>
   </Router>
-)
+);
 
 export default Routes;
 
-if(typeof window !== 'undefined') {
-  render((
-    <Routes />
-  ), document.getElementById('container'))
+if (typeof window !== 'undefined') {
+  render(
+    (
+      <Routes />
+    ), document.getElementById('container'),
+  );
 }

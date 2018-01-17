@@ -89,8 +89,4 @@ Try Positioning absolute, bottom 10px, right 5px:
 #position.absolute(bottom-right, 10px, 5px);
 ```
 
-
-
-
-
-
+## More Coming Soon. Stay tuned!
