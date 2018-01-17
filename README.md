@@ -57,7 +57,7 @@ I am essentially replacing common groups of styles with 1 line of code, in Engli
 ## Borders
 
 ```CSS
-// Default: border: 1px Solid black
+/* Default: border: 1px Solid black */
 #border.solid();
 ```
 
@@ -67,7 +67,7 @@ Maybe you want 4px red solid border? No problem, just pass in 2px, red
 #border.solid(4px, #f00);
 ```
 
-Maybe you want 2px green top border only? Pass in top (or bottom, left, right, border width value and color)
+Maybe you want 2px green top border only? Pass in top (or bottom, left, right,) border-width value and color
 
 ```CSS
 #border.solid(top, 2px, green);
@@ -76,9 +76,10 @@ Maybe you want 2px green top border only? Pass in top (or bottom, left, right, b
 ## Absolute Positioning
 
 ```CSS
-// No default included, specify top-left, bottom-left, top-right or bottom-right.
-// Values default to 0 and 0
-// Code below comiples as position: absolute; top: 0; left: 0;
+/* No default included, specify top-left, bottom-left, top-right or bottom-right.
+ * Values default to 0 and 0
+ * Code below compiles as position: absolute; top: 0; left: 0;
+ */
 #position.absolute(top-left);
 ```
 
@@ -86,6 +87,7 @@ Try Positioning absolute, bottom 10px, right 5px:
 
 ```CSS
 #position.absolute(bottom-right, 10px, 5px);
+```
 
 
 
