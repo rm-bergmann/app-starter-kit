@@ -8,29 +8,25 @@ class BlogList extends React.Component {
 
     this.state = {
       list: [],
-      loading: true
     };
   }
-  
   componentDidMount() {
-    
     axios.get('https://jsonplaceholder.typicode.com/posts').then(data => {
-      var component = this;
+      const component = this;
       component.setState({
         list: data.data,
-        loading: false
-      })
-    })
-    .catch(function(error) {
+        loading: false,
+      });
+    }).catch(function (error) {
       console.log(error);
     });
   }
 
   render() {
     return (
-      <div className={'content'}>     
+      <div className="content">
         {this.state.list.map(e => (
-          <div> 
+          <div>
             <h1 key={e.title}>{e.title}</h1>
             <div key={e.body}>{e.body}</div>
           </div>

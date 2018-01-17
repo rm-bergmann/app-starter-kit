@@ -9,7 +9,7 @@ class About extends React.Component {
           <p>More content to go on the about page</p>
         </div>
       </div>
-    )
+    );
   }
 }
 
