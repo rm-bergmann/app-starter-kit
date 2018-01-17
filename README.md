@@ -5,7 +5,7 @@ After experimenting with Create React App, I thought it was really good, but mis
 have created something similar, but with a few extra's. I have also included my LESS mixin library, I will
 list the available mixins for use.
 
-## Installation:
+# Installation:
 
 * $ git Clone
 * $ npm install
@@ -13,28 +13,82 @@ list the available mixins for use.
 * $ npm run build : Bundles / minifies files for production
 * $ npm test      : Runs unit tests
 
-## Dependencies:
-
+# Dependencies:
 * Node, NPM
-* React, React Router, React Router Dom
+
+## React
+* React, React Dom
+* React Router, React Router Dom
+
+## Redux
 * Redux, Redux Dev Tools, React Redux
-* Axios
-* Webpack, Webpack-Dev-Server
-* Express JS
+
+## Axios
+* Used for http requests
+
+## Webpack Loaders & Plugins:
+* Webpack-Dev-Server
+* Browsersync & HTML Injection
 * Babel-loader
-* Less-loader, Post CSS Loader, CSS Loader
+* Less-loader, CSS Loader
+* Post CSS Loader (Used for auto prefixing)
+* UglifyJS
+
+## Testing & Linting
 * Jest
 * ES Lint
+
+## JS Server
+* Express JS
 * Nodemon
-
-## LESS
-
-I set up LESS so it's namespaced with groups of re-usable mixins. This makes development time a lot faster for me.
-Can be used accross all projects but each project will have some additional unique mixins specific for the project.
 
 ## Pocketgrid
 
 PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
 for columns. I have included a mixin for the block elements.
+
+## LESS
+
+I set up LESS so it's namespaced with groups of re-usable mixins. This makes development time a lot faster for me.
+I am essentially replacing common groups of styles with 1 line of code, in English readable format (Declarative).
+
+# Mixins
+
+## Borders
+
+```CSS
+// Default: border: 1px Solid black
+#border.solid();
+```
+
+Maybe you want 4px red solid border? No problem, just pass in 2px, red
+
+```CSS
+#border.solid(4px, #f00);
+```
+
+Maybe you want 2px green top border only? Pass in top (or bottom, left, right, border width value and color)
+
+```CSS
+#border.solid(top, 2px, green);
+```
+
+## Absolute Positioning
+
+```CSS
+// No default included, specify top-left, bottom-left, top-right or bottom-right.
+// Values default to 0 and 0
+// Code below comiples as position: absolute; top: 0; left: 0;
+#position.absolute(top-left);
+```
+
+Try Positioning absolute, bottom 10px, right 5px:
+
+```CSS
+#position.absolute(bottom-right, 10px, 5px);
+
+
+
+
 
 
