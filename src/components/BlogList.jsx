@@ -18,7 +18,7 @@ class BlogList extends React.Component {
         loading: false,
       });
     }).catch(function (error) {
-      console.log(error);
+      Console.log(error);
     });
   }
 

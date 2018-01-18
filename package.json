@@ -22,6 +22,7 @@
     "react-redux": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
+    "prop-types": "^15.6.0",
     "redux": "latest",
     "requirejs": "latest"
   },
@@ -31,7 +32,7 @@
     "babel-jest": "latest",
     "babel-loader": "latest",
     "babel-plugin-transform-react-jsx": "latest",
-    "babel-preset-es2015": "latest",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "latest",
     "babel-preset-stage-2": "latest",
     "babel-register": "latest",

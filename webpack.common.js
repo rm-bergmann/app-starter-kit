@@ -40,13 +40,6 @@ let config = {
   },
 
   module: {
-    loaders: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader?presets[]=es2015&presets[]=react'
-      }
-    ],
 
     rules: [
       {
@@ -90,7 +83,7 @@ let config = {
       'public/bundles/*.hot-update.js',
       'public/bundles/*.hot-update.json'
     ]),
-        
+    
     extractLess
   
   ]
