@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 class BlogList extends React.Component {
@@ -11,17 +10,16 @@ class BlogList extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts').then(data => {
+    axios.get('https://jsonplaceholder.typicode.com/posts').then((data) => {
       const component = this;
       component.setState({
         list: data.data,
         loading: false,
       });
-    }).catch(function (error) {
-      Console.log(error);
+    }).catch((error) => {
+      console.log(error);
     });
   }
-
   render() {
     return (
       <div className="content">

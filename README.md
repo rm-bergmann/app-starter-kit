@@ -77,8 +77,8 @@ Maybe you want 2px green top border only? Pass in top (or bottom, left, right,) 
 ## Absolute Positioning
 
 No default included, specify top-left, bottom-left, top-right or bottom-right.
-Values default to 0 and 0
-Code below compiles to: position: absolute; top: 0; left: 0;
+Values default to 0 and 0.
+The code below compiles to: position: absolute; top: 0; left: 0;
 
 ```CSS
 #position.absolute(top-left);
@@ -92,13 +92,13 @@ Try Positioning absolute, bottom: 10px, right: 5px:
 
 ## Display Mixins
 
-Apply this mixin to the parent element which will align children from left to right with equal spacing
+Apply this mixin to the parent element which will align children from left to right with equal spacing.
 ```CSS
 #display.flex(space);
 ```
 
 ### Pocketgrid
-I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers
+I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
 
 Apply this mixin to elements with the .block class.
 By default (mobile screens), it outputs width: 90%; margin-left: 5%:
@@ -114,7 +114,7 @@ Consider the following HTML:
 <div class"block block-02">Right Block</div>
 ```
 
-Lets say for a desktop screen you may want 2 blocks next to each other
+Lets say for a desktop screen you may want 2 blocks next to each other.
 Just pass the width and left margin in a media query:
 
 ```CSS
