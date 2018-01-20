@@ -7,9 +7,10 @@ list the available mixins for use.
 
 # Installation:
 
-* $ git Clone
+* $ git clone
 * $ npm install
-* $ npm start     : Development Mode (localhost:8080) with browsersync (localhost:3000)
+* $ npm run watch : webpack watch mode with browsersync (localhost:3000): Updates JS & css bundles on file save
+* $ npm start     : Webpack Dev Server (localhost:8080) with browsersync (localhost:3000) : Stores changes in memory
 * $ npm run build : Bundles / minifies files for production
 * $ npm test      : Runs unit tests
 
@@ -95,6 +96,16 @@ Try Positioning absolute, bottom: 10px, right: 5px:
 Apply this mixin to the parent element which will align children from left to right with equal spacing.
 ```CSS
 #display.flex(space);
+```
+
+To minimize common repeatition, this mixin takes color as the first param and background-color as the second param.
+By default color is set to black and background color set to white. Pass in the colours of your choice.
+```CSS
+/* color: black; background-color: white*/
+#display.colours();
+
+/* color: white; background: blue */
+#display.colours(white, blue);
 ```
 
 ### Pocketgrid

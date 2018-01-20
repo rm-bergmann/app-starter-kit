@@ -5,9 +5,9 @@
   "main": "webpack.common.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --config webpack.dev.js && nodemon app.js --exec babel-node",
+    "start": "webpack-dev-server --config webpack.dev.js && nodemon app.js",
     "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch --config webpack.dev.js",
+    "watch": "webpack --watch --config webpack.dev.js && nodemon app.js",
     "test_watch": "npm test -- --watch",
     "test_cov": "npm test -- --coverage .; true",
     "prepush": "npm test"
