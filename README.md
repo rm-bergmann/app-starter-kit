@@ -98,6 +98,16 @@ Apply this mixin to the parent element which will align children from left to ri
 #display.flex(space);
 ```
 
+To minimize common repeatition, this mixin takes color as the first param and background-color as the second param.
+By default color is set to black and background color set to white. Pass in the colours of your choice.
+```CSS
+/* color: black; background-color: white*/
+#display.colours();
+
+/* color: white; background: blue */
+#display.colours(white, blue);
+```
+
 ### Pocketgrid
 I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
 
