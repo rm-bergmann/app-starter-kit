@@ -7,9 +7,10 @@ list the available mixins for use.
 
 # Installation:
 
-* $ git Clone
+* $ git clone
 * $ npm install
-* $ npm start     : Development Mode (localhost:8080) with browsersync (localhost:3000)
+* $ npm run watch : webpack watch mode with browsersync (localhost:3000): Updates JS & css bundles on file save
+* $ npm start     : Webpack Dev Server (localhost:8080) with browsersync (localhost:3000) : Stores changes in memory
 * $ npm run build : Bundles / minifies files for production
 * $ npm test      : Runs unit tests
 
