@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
 let config = {
   
   entry: {
-    app: COMP_DIR + '/Routes.jsx'
+    app: COMP_DIR + '/Index.jsx'
   },
   
   output: {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Home from './Home';
@@ -24,11 +23,3 @@ const Routes = () => (
 );
 
 export default Routes;
-
-if (typeof window !== 'undefined') {
-  render(
-    (
-      <Routes />
-    ), document.getElementById('app'),
-  );
-}
