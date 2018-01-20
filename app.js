@@ -17,13 +17,6 @@ if (process.env.NODE_ENV !== 'production') {
   console.log('Looks like we are in development mode!');
 }
 
-require('babel-core/register')({
-  presets: [
-    'react',
-    'transform-react-jsx'
-  ]
-});
-
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js configuration file as a base.
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath

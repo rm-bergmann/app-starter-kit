@@ -29,6 +29,6 @@ if (typeof window !== 'undefined') {
   render(
     (
       <Routes />
-    ), document.getElementById('container'),
+    ), document.getElementById('app'),
   );
 }
