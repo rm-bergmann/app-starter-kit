@@ -13,5 +13,5 @@ const Home = () => (
 export default Home;
 
 if (typeof window !== 'undefined') {
-  render(<Home />, document.getElementById('container'));
+  render(<Home />, document.getElementById('app'));
 }
