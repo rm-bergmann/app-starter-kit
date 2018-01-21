@@ -42,7 +42,7 @@
    * Set Width & Height
    */
 
-  .dimensions(@w: 100px, @h: 100px) {
+  .dimensions(@w: 100px, @h: 100px) when (default()) {
     width: @w;
     height: @h;
   }
@@ -51,7 +51,7 @@
    * Width & Height always equal
    */
   
-  .equal-dimensions(@val: 100%) {
+  .dimensions(@type, @val: 100px) when (@type = equal) {
     width: @val;
     height: @val;
   }
