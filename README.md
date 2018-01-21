@@ -68,7 +68,46 @@ for columns. I have included a mixin for the block elements.
 I set up LESS so it's namespaced with groups of re-usable mixins. This makes development time a lot faster for me.
 I am essentially replacing common groups of styles with 1 line of code, in English readable format (Declarative).
 
-# Mixins
+## Pocketgrid
+I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
+
+Apply this mixin to elements with the .block class.
+By default (mobile screens), it outputs width: 90%; margin-left: 5%:
+
+```CSS
+#display.grid();
+```
+
+Consider the following HTML:
+
+```HTML
+<div class"block block-01">Left Block</div>
+<div class"block block-02">Right Block</div>
+```
+
+Lets say for a desktop screen you may want 2 blocks next to each other.
+Just pass the width and left margin in a media query:
+
+```CSS
+.block {
+ 
+  &-01 {
+    #display.grid();
+    
+    @media @min-desktop {
+      #display.grid(40%, 0);
+    }
+  }
+  
+  &-02 {
+    #display.grid();
+    
+    @media @min-desktop {
+      #display.grid(40%, 20%);
+    }
+  }
+}
+```
 
 ## Borders
 
@@ -134,45 +173,19 @@ If the width and height are the same values pass in the type "equal", then the d
 #display.dimensions(equal, 200px);
 ```
 
-### Pocketgrid
-I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
-
-Apply this mixin to elements with the .block class.
-By default (mobile screens), it outputs width: 90%; margin-left: 5%:
-
+When you float an elements children left or right, apply this mixin so the parent can retain it's height:
 ```CSS
-#display.grid();
+#display.clearfix();
 ```
 
-Consider the following HTML:
-
-```HTML
-<div class"block block-01">Left Block</div>
-<div class"block block-02">Right Block</div>
+When you target the :before and :after psuedo elements apply this mixin to display it.
+```CSS
+#display.psuedo();
 ```
 
-Lets say for a desktop screen you may want 2 blocks next to each other.
-Just pass the width and left margin in a media query:
-
+Style a link as buttons, as used in Nav.
 ```CSS
-.block {
- 
-  &-01 {
-    #display.grid();
-    
-    @media @min-desktop {
-      #display.grid(40%, 0);
-    }
-  }
-  
-  &-02 {
-    #display.grid();
-    
-    @media @min-desktop {
-      #display.grid(40%, 20%);
-    }
-  }
-}
+#button.link();
 ```
 
 
