@@ -3,23 +3,34 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Dashboard from './Dashboard';
 import About from './About';
-import BlogList from './BlogList';
+import Blog from './Blog';
 
-const Routes = () => (
-  <Router>
-    <div>
-      <nav>
-        <ul className="block-group">
-          <li><Link href="/" to={Dashboard}>Dashboard</Link></li>
-          <li><Link href="/about" to={About}>About</Link></li>
-          <li><Link href="/blog" to={BlogList}>Blog</Link></li>
-        </ul>
-      </nav>
-      <Route exact path="/" component={Dashboard} />
-      <Route path="/about" component={About} />
-      <Route path="/blog" component={BlogList} />
-    </div>
-  </Router>
-);
+class Routes extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      active: 'active',
+    };
+  }
+  render() {
+    return (
+      <Router>
+        <div>
+          <nav>
+            <ul className="block-group">
+              <li className={this.state.active}><Link to={Dashboard}>Dashboard</Link></li>
+              <li><Link to={About}>About</Link></li>
+              <li><Link to={Blog}>Blog</Link></li>
+            </ul>
+          </nav>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
+        </div>
+      </Router>
+    );
+  }
+}
 
 export default Routes;
