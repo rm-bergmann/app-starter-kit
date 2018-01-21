@@ -15,7 +15,10 @@ let config = merge(common, {
   devtool: 'inline-source-map',
   
   devServer: {
-    contentBase: './public'
+    contentBase: './public',
+    historyApiFallback: true,
+    inline: true,
+    hot: true
   },
   
   plugins: [
