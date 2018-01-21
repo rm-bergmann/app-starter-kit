@@ -5,22 +5,14 @@ import Routes from './Routes';
 
 import '../less/imports.less';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-  render() {
-    return (
-      <div>
-        <Header />
-        <main>
-          <Routes />
-        </main>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <Header />
+    <main>
+      <Routes />
+    </main>
+  </div>
+);
 
 if (typeof window !== 'undefined') {
   ReactDOM.render(
