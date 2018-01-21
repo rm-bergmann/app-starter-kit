@@ -2,8 +2,10 @@ import React from 'react';
 
 const About = () => (
   <div className="block-group">
-    <h1>About Page</h1>
-    <p>More content to go on the about page</p>
+    <div className="block block-content">
+      <h1>About Page</h1>
+      <p>More content to go on the about page</p>
+    </div>
   </div>
 );
 
