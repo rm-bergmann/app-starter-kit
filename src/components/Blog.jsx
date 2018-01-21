@@ -23,7 +23,7 @@ class Blog extends React.Component {
   render() {
     return (
       <div className="block-group">
-        <div className="content block">
+        <div className="block block-content">
           {this.state.list.map(e => (
             <div key={e.id}>
               <h2>{e.title}</h2>

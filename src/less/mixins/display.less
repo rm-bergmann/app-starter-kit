@@ -11,9 +11,14 @@
   * @params: width, margin-left. Use percent [%] values
   */
 
-  .grid(@w: 90%, @ml: 5%) {
+  .grid(@w: 90%, @ml: 5%) when (default()) {
     width: @w;
     margin-left: @ml;
+  }
+  
+  .grid(@type) when (@type = full) {
+    width: 100%;
+    margin-left: 0;
   }
    
   /*

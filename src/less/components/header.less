@@ -3,3 +3,14 @@ header {
   #display.colors(@white, @blue);
   padding-top: 40px;
 }
+
+.block {
+  
+  &-logo {
+    #display.grid();
+      
+    @media @tablet {
+      #display.grid(40%, 0);
+    }
+  }
+}

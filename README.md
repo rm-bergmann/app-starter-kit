@@ -12,12 +12,16 @@ below for list of the available mixins for use.
 ## Commands:
 
 ### $ npm start
-* webpack watch mode with browsersync (localhost:3000)
-* Updates JS & css bundles on file save
+* Runs Webpack watch mode with browsersync (localhost:3000)
+* Updates JS & css on file save rebundles and reloads browser
 * Use this command for development
 
 ### $ npm run build
 * Bundles / minifies files for production
+
+### $ npm run dev
+* Runs webpack dev server on port 8080 and browsersync on 3000
+* Currently the changes don't update, I will fix asap, use webpack watch mode for now
 
 ### $ npm test
 * Runs unit tests
@@ -108,10 +112,10 @@ Apply this mixin to the parent element which will align children from left to ri
 To minimize common repeatition, this mixin takes color as the first param and background-color as the second param.
 By default color is set to black and background color set to white. Pass in the colours of your choice.
 ```CSS
-/* color: black; background-color: white*/
+/* color: black; background-color: white */
 #display.colours();
 
-/* color: white; background: blue */
+/* color: white; background-color: blue */
 #display.colours(white, blue);
 ```
 
