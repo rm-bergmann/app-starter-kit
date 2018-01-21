@@ -22,13 +22,15 @@ class Blog extends React.Component {
   }
   render() {
     return (
-      <div className="content">
-        {this.state.list.map(e => (
-          <div>
-            <h1 key={e.title}>{e.title}</h1>
-            <div key={e.body}>{e.body}</div>
-          </div>
-        ))}
+      <div className="block-group">
+        <div className="content block">
+          {this.state.list.map(e => (
+            <div key={e.id}>
+              <h2>{e.title}</h2>
+              <div>{e.body}</div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
