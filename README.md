@@ -121,10 +121,9 @@ The first param is the width value, the second param is the hight value:
 #display.dimensions(200px, 50px);
 ```
 
-If the width and height are the same values use this mixin:
-It takes 1 param which is both width and height values:
+If the width and height are the same values pass in the type "equal", then the desired value (default is set to 100px)
 ```CSS
-#display.equal-dimensions(100px);
+#display.dimensions(equal, 200px);
 ```
 
 ### Pocketgrid

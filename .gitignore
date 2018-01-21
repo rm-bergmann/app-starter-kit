@@ -53,6 +53,6 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Ignore  IDE specific files
-React.komodoproject
+# Ignore IDE specific files
+*.komodoproject
 
