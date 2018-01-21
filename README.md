@@ -39,16 +39,18 @@ below for list of the available mixins for use.
 * Used for http requests
 
 ## Webpack Loaders & Plugins:
+* Webpack watch mode
 * Webpack-Dev-Server
 * Browsersync & HTML Injection
 * Babel-loader
-* Less-loader, CSS Loader
+* Less-loader, CSS-loader
 * Post CSS Loader (Used for auto prefixing)
 * UglifyJS
 
 ## Testing & Linting
 * Jest
 * ES Lint
+* [Airbnb Javascript style guide](https://github.com/airbnb/javascript)
 
 ## JS Server
 * Express JS
@@ -58,6 +60,8 @@ below for list of the available mixins for use.
 
 PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
 for columns. I have included a mixin for the block elements.
+
+[More info here](http://arnaudleray.github.io/pocketgrid/)
 
 ## LESS
 

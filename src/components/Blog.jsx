@@ -24,6 +24,7 @@ class Blog extends React.Component {
     return (
       <div className="block-group">
         <div className="block block-content">
+          <h1>Example http request with Axios:</h1>
           {this.state.list.map(e => (
             <div key={e.id}>
               <h2>{e.title}</h2>
