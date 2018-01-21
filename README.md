@@ -2,20 +2,27 @@
 
 This is a simple React App starter kit with the essential dependencies that I would use for development.
 After experimenting with Create React App, I thought it was really good, but missing a few things, so I
-have created something similar, but with a few extra's. I have also included my LESS mixin library, I will
-list the available mixins for use.
+have created something similar, but with a few extra's. I have also included my LESS mixin library, see 
+below for list of the available mixins for use.
 
 # Installation:
+* Node & NPM are dependencies so they need to be installed.
+* Clone the project, delete the git files and install the node_modules with 'npm install'
 
-* $ git clone
-* $ npm install
-* $ npm run watch : webpack watch mode with browsersync (localhost:3000): Updates JS & css bundles on file save
-* $ npm start     : Webpack Dev Server (localhost:8080) with browsersync (localhost:3000) : Stores changes in memory
-* $ npm run build : Bundles / minifies files for production
-* $ npm test      : Runs unit tests
+## Commands:
 
-# Dependencies:
-* Node, NPM
+### $ npm start
+* webpack watch mode with browsersync (localhost:3000)
+* Updates JS & css bundles on file save
+* Use this command for development
+
+### $ npm run build
+* Bundles / minifies files for production
+
+### $ npm test
+* Runs unit tests
+
+## What's included?:
 
 ## React
 * React, React Dom
@@ -106,6 +113,18 @@ By default color is set to black and background color set to white. Pass in the 
 
 /* color: white; background: blue */
 #display.colours(white, blue);
+```
+
+Width and height are common styles to add to elements, use this mixin if width and height are different values:
+The first param is the width value, the second param is the hight value:
+```CSS
+#display.dimensions(200px, 50px);
+```
+
+If the width and height are the same values use this mixin:
+It takes 1 param which is both width and height values:
+```CSS
+#display.equal-dimensions(100px);
 ```
 
 ### Pocketgrid

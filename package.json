@@ -5,9 +5,9 @@
   "main": "webpack.common.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack-dev-server --hot --config webpack.dev.js",
+    "start": "webpack --watch --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "watch": "webpack --watch --hot --config webpack.dev.js",
+    "dev-server": "webpack-dev-server --hot --config webpack.dev.js", 
     "test_watch": "npm test -- --watch",
     "test_cov": "npm test -- --coverage .; true",
     "prepush": "npm test"
