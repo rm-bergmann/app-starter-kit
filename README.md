@@ -108,6 +108,18 @@ By default color is set to black and background color set to white. Pass in the 
 #display.colours(white, blue);
 ```
 
+Width and height are common styles to add to elements, use this mixin if width and height are different values:
+The first param is the width value, the second param is the hight value:
+```CSS
+#display.dimensions(200px, 50px);
+```
+
+If the width and height are the same values use this mixin:
+It takes 1 param which is both width and height values:
+```CSS
+#display.equal-dimensions(100px);
+```
+
 ### Pocketgrid
 I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
 
