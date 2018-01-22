@@ -11,7 +11,7 @@ const Routes = () => (
         <div className="block-group">
           <ul className="block">
             <li>
-              <NavLink activeClassName="active" to="/">Dashboard</NavLink>
+              <NavLink exact activeClassName="active" to="/">Dashboard</NavLink>
             </li>
             <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
             <li><NavLink activeClassName="active" to="/blog">Blog</NavLink></li>

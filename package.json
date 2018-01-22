@@ -7,7 +7,7 @@
     "test": "jest",
     "start": "webpack --watch --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack-dev-server --config webpack.dev.js", 
+    "dev": "webpack-dev-server --config webpack.dev.js",
     "test_watch": "npm test -- --watch",
     "test_cov": "npm test -- --coverage .; true",
     "prepush": "npm test"
@@ -42,6 +42,8 @@
     "bs-html-injector": "latest",
     "clean-webpack-plugin": "latest",
     "css-loader": "latest",
+    "enzyme": "^3.3.0",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-loader": "latest",
