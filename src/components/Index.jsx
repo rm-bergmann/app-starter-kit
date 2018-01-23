@@ -7,7 +7,7 @@ import '../less/imports.less';
 
 const App = () => (
   <div>
-    <Header />
+    <Header appName="App Starter Kit" />
     <main>
       <Routes />
     </main>
