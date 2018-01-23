@@ -7,21 +7,22 @@ below for list of the available mixins for use.
 
 # Installation:
 * Node & NPM are dependencies so they need to be installed.
-* Clone the project, delete the git files and install the node_modules with 'npm install'
+* Clone the project, delete the git files (unless you are contributing to this repo).
+* Install the node_modules with '$ npm install'.
 
 ## Commands:
 
 ### $ npm start
-* Runs Webpack watch mode with browsersync (localhost:3000)
-* Updates JS & css on file save rebundles and reloads browser
-* Use this command for development
+* Runs Webpack watch mode with browsersync (localhost:3000).
+* Updates JS & css on file save rebundles and reloads browser.
+* Use this command for development.
 
 ### $ npm run build
-* Bundles / minifies files for production
+* Bundles / minifies files for production.
 
 ### $ npm run dev
-* Runs webpack dev server on port 8080 and browsersync on 3000
-* Currently the changes don't update, I will fix asap, use webpack watch mode for now
+* Runs webpack dev server on port 8080 and browsersync on 3000.
+* Currently the changes don't update on file save, I will fix this asap, use npm start instead for now.
 
 ### $ npm test
 * Runs unit tests
@@ -94,7 +95,7 @@ Just pass the width and left margin in a media query:
   &-01 {
     #display.grid();
     
-    @media @min-desktop {
+    @media @desktop-narrow {
       #display.grid(40%, 0);
     }
   }
@@ -102,7 +103,7 @@ Just pass the width and left margin in a media query:
   &-02 {
     #display.grid();
     
-    @media @min-desktop {
+    @media @desktop-narrow {
       #display.grid(40%, 20%);
     }
   }
@@ -117,7 +118,7 @@ Black solid border, default:
 #border.solid();
 ```
 
-Maybe you want 4px red solid border? No problem, just pass in 2px, red
+Maybe you want 4px red solid border? No problem, just pass in 4px, and the desired color.
 
 ```CSS
 #border.solid(4px, #f00);
