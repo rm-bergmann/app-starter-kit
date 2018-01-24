@@ -27,13 +27,10 @@ below for list of the available mixins for use.
 ### $ npm test
 * Runs unit tests
 
-## What's included?:
+# What's included?:
 
-## React
-* React, React Dom
-* React Router, React Router Dom
-
-## Redux
+## React & Redux
+* React, React Dom, React Router, Prop-Types
 * Redux, Redux Dev Tools, React Redux
 
 ## Axios
@@ -57,20 +54,18 @@ below for list of the available mixins for use.
 * Express JS
 * Nodemon
 
-## Pocketgrid
-
-PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
-for columns. I have included a mixin for the block elements.
-
-[More info here](http://arnaudleray.github.io/pocketgrid/)
-
 ## LESS
 
 I set up LESS so it's namespaced with groups of re-usable mixins. This makes development time a lot faster for me.
 I am essentially replacing common groups of styles with 1 line of code, in English readable format (Declarative).
 
 ## Pocketgrid
-I will be migrating to the CSS grid soon, but for now I still use Pocketgrid as it works in all browsers.
+PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
+for columns. I have included a mixin for the block elements.
+
+[More info here](http://arnaudleray.github.io/pocketgrid/)
+
+Mixins for CSS Grids will be included in future versions. 
 
 Apply this mixin to elements with the .block class.
 By default (mobile screens), it outputs width: 90%; margin-left: 5%:
@@ -92,16 +87,19 @@ Just pass the width and left margin in a media query:
 ```CSS
 .block {
  
-  &-01 {
+  &-01,
+  &-02 {
     #display.grid();
-    
+  }
+  
+  &-01 {
+  
     @media @desktop-narrow {
       #display.grid(40%, 0);
     }
   }
   
   &-02 {
-    #display.grid();
     
     @media @desktop-narrow {
       #display.grid(40%, 20%);
@@ -191,10 +189,11 @@ When you target the :before and :after pseudo elements apply this mixin to displ
 #display.pseudo();
 ```
 
-Style a link as buttons, as used in Nav.
+## Button Mixins
+
+Style a link as buttons, as used in the navbar.
 ```CSS
 #button.link();
 ```
-
 
 ## More Coming Soon. Stay tuned!
