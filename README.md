@@ -189,6 +189,13 @@ When you target the :before and :after pseudo elements apply this mixin to displ
 #display.pseudo();
 ```
 
+If you want to show / hide on specific devices you can use these mixins, as they will take care of the media queries:
+```CSS
+#display.mobile();
+#display.tablet();
+#display.desktop();
+```
+
 ## Button Mixins
 
 Style a link as buttons, as used in the navbar.

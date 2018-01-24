@@ -26,11 +26,11 @@
    * Less on mobile more on desktop
    */
 
-  .vertical-padding() {
-    padding: .5em 0;
+  .vertical-padding(@val: .5rem) {
+    padding: @val 0;
 
     @media @tablet {
-      padding: 1.5em 0;
+      padding: (@val * 2) 0;
     }
   }
   
@@ -127,10 +127,10 @@
    */
 
   .desktop() {
-    display: block;
+    display: none;
 
-    @media @mobile-max {
-      display: none;
+    @media @desktop-narrow {
+      display: block;
     }
   }
   
@@ -153,21 +153,11 @@
    */
 
   .mobile() {
-    display: none;
+    display: block;
 
-    @media @max-mobile {
-      display: block;
+    @media @tablet-narrow {
+      display: none;
     }
-  }
-  
-  /*
-   * Vertical Margin.
-   * This is a common style, best to keep it in a mixin so
-   * they can all be adjusted 
-   */
-  
-  .v-margin() {
-    margin: 1.2em 0;
   }
   
 }
