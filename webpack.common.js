@@ -80,8 +80,7 @@ let config = {
     }),
     
     new CleanWebpackPlugin([
-      'public/bundles/*.hot-update.js',
-      'public/bundles/*.hot-update.json'
+      'public/bundles/*.hot-update.*'
     ]),
     
     extractLess

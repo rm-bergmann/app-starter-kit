@@ -146,6 +146,13 @@ Try Positioning absolute, bottom: 10px, right: 5px:
 #position.absolute(bottom-right, 10px, 5px);
 ```
 
+You can also position fixed or relative with the same params:
+
+```CSS
+#position.relative(top-right, 0, 50%);
+#position.fixed(top-left);
+```
+
 ## Display Mixins
 
 Apply this mixin to the parent element which will align children from left to right with equal spacing.
@@ -179,9 +186,9 @@ When you float an elements children left or right, apply this mixin so the paren
 #display.clearfix();
 ```
 
-When you target the :before and :after psuedo elements apply this mixin to display it.
+When you target the :before and :after pseudo elements apply this mixin to display it.
 ```CSS
-#display.psuedo();
+#display.pseudo();
 ```
 
 Style a link as buttons, as used in Nav.
