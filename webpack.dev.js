@@ -15,23 +15,21 @@ let config = merge(common, {
   devtool: 'inline-source-map',
   
   devServer: {
-    contentBase: './public',
+    contentBase: path.join(__dirname, 'public'),
     historyApiFallback: true,
     inline: true,
-    hot: true
+    hot: true,
   },
   
   plugins: [
-  
+    
     new BrowserSync (
       {
         host: hostname,
         port: 3000,
         open: false,
-        server: {
-          baseDir: [BUILD_DIR],
-          middleware: [historyApiFallback()]
-        },
+        reload: false,
+        proxy: 'http://localhost:8080/',
         files: [
           '*.css'
         ],
@@ -39,7 +37,10 @@ let config = merge(common, {
           {
             module: 'bs-html-injector',
             options: {
-              files: ['/public/*.html', '/public/bundles/*.css']
+              files: [
+                './public/*.html',
+                './public/bundles/*.css'
+              ]
             }
           }
         ]

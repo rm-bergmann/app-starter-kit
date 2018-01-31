@@ -13,16 +13,13 @@ below for list of the available mixins for use.
 ## Commands:
 
 ### $ npm start
-* Runs Webpack watch mode with browsersync (localhost:3000).
-* Updates JS & css on file save rebundles and reloads browser.
+* Runs Webpack-dev-server on port 8080 with a browsersync proxy on port 3000.
+* Updates JS & css on files with hot reload.
 * Use this command for development.
+* File changes are stored in memory
 
 ### $ npm run build
 * Bundles / minifies files for production.
-
-### $ npm run dev
-* Runs webpack dev server on port 8080 and browsersync on 3000.
-* Currently the changes don't update on file save, I will fix this asap, use npm start instead for now.
 
 ### $ npm test
 * Runs unit tests
@@ -49,10 +46,6 @@ below for list of the available mixins for use.
 * Jest
 * ES Lint
 * [Airbnb Javascript style guide](https://github.com/airbnb/javascript)
-
-## JS Server
-* Express JS
-* Nodemon
 
 ## LESS
 
