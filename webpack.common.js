@@ -22,13 +22,15 @@ if (process.env.NODE_ENV !== 'production') {
 let config = {
   
   entry: {
-    app: COMP_DIR + '/Index.jsx'
+    app: [
+      COMP_DIR + '/Index.jsx'
+    ]
   },
   
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR + '/bundles/',
-    publicPath: '/'
+    publicPath: '/bundles/'
   },
   
   node: {
@@ -72,6 +74,7 @@ let config = {
     
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
+    // new webpack.optimize.OccurenceOrderPlugin(),
     new ManifestPlugin(),
     
     new webpack.optimize.CommonsChunkPlugin({
