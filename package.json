@@ -7,7 +7,6 @@
     "test": "jest",
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack --watch --config webpack.dev.js",
     "test_watch": "npm test -- --watch",
     "test_cov": "npm test -- --coverage .; true",
     "prepush": "npm test"

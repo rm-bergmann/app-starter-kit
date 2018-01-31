@@ -21,10 +21,6 @@ below for list of the available mixins for use.
 ### $ npm run build
 * Bundles / minifies files for production.
 
-### $ npm run dev
-* Runs webpack watch mode
-* Watch mode recompiles files and reloads browser (slower than webpack-dev-server)
-
 ### $ npm test
 * Runs unit tests
 
