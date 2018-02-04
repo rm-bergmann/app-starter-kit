@@ -4,7 +4,6 @@ const common  = require('./webpack.common.js');
 const path    = require('path');
 
 const BUILD_DIR = path.resolve(__dirname, 'public');
-
 const historyApiFallback = require('connect-history-api-fallback');
 
 const BrowserSync = require('browser-sync-webpack-plugin');
