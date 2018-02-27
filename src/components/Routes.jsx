@@ -13,8 +13,12 @@ const Routes = () => (
             <li>
               <NavLink exact activeClassName="active" to="/">Dashboard</NavLink>
             </li>
-            <li><NavLink activeClassName="active" to="/about">About</NavLink></li>
-            <li><NavLink activeClassName="active" to="/blog">Blog</NavLink></li>
+            <li>
+              <NavLink activeClassName="active" to="/about">About</NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" to="/blog">Blog</NavLink>
+            </li>
           </ul>
         </div>
       </nav>
