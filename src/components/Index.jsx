@@ -1,21 +1,10 @@
+import 'react-hot-loader/patch';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import Header from './Header';
-import Routes from './Routes';
 
 import '../less/imports.less';
 
-const App = () => (
-  <AppContainer>
-    <div>
-      <Header appName="App Starter Kit" />
-      <main>
-        <Routes />
-      </main>
-    </div>
-  </AppContainer>
-);
+import App from './App';
 
 if (typeof window !== 'undefined') {
   ReactDOM.render(
