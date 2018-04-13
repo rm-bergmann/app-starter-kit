@@ -8,7 +8,12 @@ nav {
     li {
 
       a {
-        #button.link(@white, @blue);        
+        #button.link(@white, @blue);
+        
+        &:hover,
+        &.active {
+          background: darken(@blue, 40%);
+        }
       }
     }
   }

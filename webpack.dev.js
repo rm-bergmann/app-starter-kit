@@ -18,6 +18,7 @@ let config = merge(common, {
     historyApiFallback: true,
     inline: true,
     hot: true,
+    overlay: true
   },
   
   plugins: [
