@@ -5,7 +5,7 @@ const common  = require('./webpack.common.js');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCss    = require('optimize-css-assets-webpack-plugin');
 
-let config = merge(common, {
+const config = merge(common, {
   devtool: 'source-map',
   
   plugins: [
