@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, NavLink, browserHistory } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  browserHistory,
+} from 'react-router-dom';
 import Dashboard from './Dashboard';
 import About from './About';
 import Blog from './Blog';

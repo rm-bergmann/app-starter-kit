@@ -8,7 +8,9 @@ class Blog extends React.Component {
     this.state = {
       list: [],
     };
+    console.log('testing');
   }
+
   componentDidMount() {
     axios.get('https://jsonplaceholder.typicode.com/posts').then((data) => {
       const component = this;
@@ -20,12 +22,14 @@ class Blog extends React.Component {
       console.log(error);
     });
   }
+
   render() {
+    const { list } = this.state;
     return (
       <div className="block-group">
         <div className="block block-content">
           <h1>Example http request with Axios:</h1>
-          {this.state.list.map(e => (
+          {list.map(e => (
             <div key={e.id}>
               <h2>{e.title}</h2>
               <div>{e.body}</div>
