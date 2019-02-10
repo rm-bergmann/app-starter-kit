@@ -25,10 +25,8 @@ const config = merge(common, {
     inline: true,
     hot: true,
     overlay: true,
-    host: '0.0.0.0',
     https: false,
     port: 3000,
-    public: hostname,
   },
   
   plugins: [   
