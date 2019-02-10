@@ -1,16 +1,17 @@
-header {
-  #display.dimensions(100%, 100px);
-  #display.colors(@white, @blue);
-  padding-top: 40px;
-}
-
-.block {
+.header {
+  #display.grid();
+  #display.dimensions(100%, 60px);
+  #display.colors(@white, darken(@blue, 40%));
+  padding: 20px 0;
   
-  &-logo {
-    #display.grid();
-      
-    @media @tablet {
-      #display.grid(40%, 0);
+  &--logo {
+
+    &-wrapper {
+      #grid.column(span, 1, 6);
+    }
+
+    &-title {
+      margin: .5rem 0 0 1.2rem;
     }
   }
 }

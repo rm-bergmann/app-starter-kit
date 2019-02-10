@@ -8,7 +8,6 @@ class Blog extends React.Component {
     this.state = {
       list: [],
     };
-    console.log('testing');
   }
 
   componentDidMount() {
@@ -26,16 +25,14 @@ class Blog extends React.Component {
   render() {
     const { list } = this.state;
     return (
-      <div className="block-group">
-        <div className="block block-content">
-          <h1>Example http request with Axios:</h1>
-          {list.map(e => (
-            <div key={e.id}>
-              <h2>{e.title}</h2>
-              <div>{e.body}</div>
-            </div>
-          ))}
-        </div>
+      <div className="content content-blog">
+        <h1>Example http request with Axios:</h1>
+        {list.map(e => (
+          <div key={e.id}>
+            <h2>{e.title}</h2>
+            <div>{e.body}</div>
+          </div>
+        ))}
       </div>
     );
   }
