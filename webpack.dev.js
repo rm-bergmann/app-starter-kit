@@ -3,52 +3,54 @@ const merge   = require('webpack-merge');
 const common  = require('./webpack.common.js');
 const path    = require('path');
 
-const BUILD_DIR = path.resolve(__dirname, 'public');
+const PUBLIC_DIR = path.resolve(__dirname, 'public');
 const historyApiFallback = require('connect-history-api-fallback');
 
-const BrowserSync = require('browser-sync-webpack-plugin');
 const hostname = 'localhost';
 
-let config = merge(common, {
+const config = merge(common, {
   
   devtool: 'inline-source-map',
-  
+  mode: 'development',
+
+  output: {
+    filename: '[name].js',
+    path: PUBLIC_DIR,
+    publicPath: '/',
+  },
+
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: PUBLIC_DIR,
     historyApiFallback: true,
     inline: true,
     hot: true,
-    overlay: true
+    overlay: true,
+    https: false,
+    port: 3000,
   },
   
-  plugins: [
-    
-    new BrowserSync (
+  plugins: [   
+    new webpack.HotModuleReplacementPlugin(),
+  ],
+  
+  module: {
+    rules: [
       {
-        host: hostname,
-        port: 3000,
-        open: false,
-        reload: false,
-        proxy: 'http://localhost:8080/',
-        files: [
-          '*.css'
-        ],
-        plugins: [
+        test: /\.(less|css)$/,
+        use: [
           {
-            module: 'bs-html-injector',
-            options: {
-              files: [
-                './public/*.html',
-                './public/bundles/*.css'
-              ]
-            }
-          }
-        ]
-      }
-    ),
-    
-    new webpack.HotModuleReplacementPlugin()
-  ]
+            loader: 'style-loader', // creates style nodes from JS strings
+          },
+          {
+            loader: 'css-loader', // translates CSS into CommonJS
+          },
+          {
+            loader: 'less-loader', // compiles Less to CSS
+          },
+        ],
+      },
+    ],
+  },
 });
 
 module.exports = config;

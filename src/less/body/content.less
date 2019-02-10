@@ -1,19 +1,8 @@
-.block {
-  
-  &-content {
-    #display.grid();
-    padding: 2em 0;
-    
-    @media @tablet {
-      #display.grid(full);
-    }
-  }
-}
-
-div.blog-list {
+.blog-list {
   margin: 2em auto;
 }
 
-#webpack-dev-server-client-overlay {
- background: #000 !important; 
+.content {
+ #grid.column(3, 12);
+ padding: 1rem;
 }

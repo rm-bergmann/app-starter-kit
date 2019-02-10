@@ -1,7 +1,0 @@
-{
-  "app.css": "style.css",
-  "app.js": "bundle.js",
-  "app.js.map": "bundle.js.map",
-  "vendor.js": "vendor.js",
-  "vendor.js.map": "vendor.js.map"
-}
