@@ -1,20 +1,23 @@
 import React from 'react';
 import axios from 'axios';
+import base64 from 'base-64';
+import ReactMarkdown from 'react-markdown';
 
 class Blog extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      list: [],
+      content: '',
     };
   }
 
   componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts').then((data) => {
+    const url = 'https://api.github.com/repos/rm-bergmann/less-style-library/contents/README.md';
+    axios.get(url).then((content) => {
       const component = this;
       component.setState({
-        list: data.data,
+        content: base64.decode(content.data.content),
         loading: false,
       });
     }).catch((error) => {
@@ -23,16 +26,10 @@ class Blog extends React.Component {
   }
 
   render() {
-    const { list } = this.state;
+    const { content } = this.state;
     return (
       <div className="content content-blog">
-        <h1>Example http request with Axios:</h1>
-        {list.map(e => (
-          <div key={e.id}>
-            <h2>{e.title}</h2>
-            <div>{e.body}</div>
-          </div>
-        ))}
+        <ReactMarkdown source={content} />
       </div>
     );
   }

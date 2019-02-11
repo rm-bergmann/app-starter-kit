@@ -22,18 +22,18 @@ const Menu = () => {
           <NavLink
             className={linkClassName}
             activeClassName={activeClassName}
-            to="/about"
+            to="/packages"
           >
-            About
+            Packages
           </NavLink>
         </li>
         <li className={itemClassName}>
           <NavLink
             className={linkClassName}
             activeClassName={activeClassName}
-            to="/blog"
+            to="/less"
           >
-            Blog
+            Less
           </NavLink>
         </li>
       </ul>
