@@ -1,11 +1,10 @@
 # Dashboard
 
-## Thank you for your download
+## Thank you for your download!
 
 This is my template kit for starting new apps. I have some custom architecture which I find works for me. I have included
 documentation and guidelines for using this package. There is always room for improvement, if you feel something can be improved please
 submit a bug report / feature request on the gthub page. Pull requests welcome.
-
 
 ## Reasons to use this package:
 
