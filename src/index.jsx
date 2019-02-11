@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Routes from './components/Routes/Routes';
 
-import '../less/imports.less';
-
-import App from './App';
+import './less/imports.less';
 
 if (typeof window !== 'undefined') {
   ReactDOM.render(
     (
-      <App />
+      <Routes />
     ), document.getElementById('app'),
   );
 }

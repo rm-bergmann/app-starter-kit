@@ -5,7 +5,7 @@ const PUBLIC_DIR = path.resolve(__dirname, 'public');
 module.exports = {
 
   entry: {
-    bundle: ['babel-polyfill', './src/app/index'],
+    bundle: ['babel-polyfill', './src/index'],
   },
 
   output: {
