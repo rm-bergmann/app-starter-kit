@@ -3,7 +3,7 @@
   #display.dimensions(100%, 60px);
   #display.colors(@white, darken(@blue, 40%));
   padding: 20px 0;
-  
+
   &--logo {
 
     &-wrapper {
@@ -17,6 +17,13 @@
       font-size: 2rem;
       font-weight: bold;
       display: block;
+    }
+  }
+  
+  &--mobile-menu {
+
+    @media @desktop-narrow-min {
+      display: none;
     }
   }
 }
