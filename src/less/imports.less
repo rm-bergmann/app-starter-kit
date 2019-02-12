@@ -2,7 +2,7 @@
 
 // Import Google fonts
 // Must specify .css or webpack throws an error and can't resolve the import.
-@import url('https://fonts.googleapis.com/css?family=Roboto.css');
+@import (css) url('https://fonts.googleapis.com/css?family=@{primary-font}');
 
 // LESS is a Declarative Language, which means we can import variables
 // anywhere, they don't have to be declared at the top.
@@ -10,15 +10,15 @@
 
 @import 'variables';
 
-// All default styling, browser reset
-@import './body/base';
-@import './body/sidebar';
+// All default styling, browser reset & page layout
+@import 'base';
+@import 'sidebar';
+@import 'content';
 
 // Import componenets. Eg: Header, Navigation, Footer etc
-@import './components/header';
-@import './components/menu';
+@import '../components/header/header';
+@import '../components/menu/menu';
 
-@import './body/content';
 
 // Mixins are all namespaced, and declared as functions
 // so that the styles don't print in the stylesheet unless they

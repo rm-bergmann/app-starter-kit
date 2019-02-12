@@ -6,9 +6,9 @@ import {
 } from 'react-router-dom';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
-import Dashboard from '../../pages/Dashboard/Dashboard';
-import Packages from '../../pages/Packages/Packages';
-import Less from '../../pages/Less/Less';
+import Dashboard from '../Dashboard/Dashboard';
+import Packages from '../Packages/Packages';
+import Less from '../Less/Less';
 
 const Routes = () => (
   <Router history={browserHistory}>
