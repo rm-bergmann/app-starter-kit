@@ -5,17 +5,17 @@ import {
   browserHistory,
 } from 'react-router-dom';
 import Menu from '../Menu/Menu';
-import Dashboard from '../../pages/Dashboard';
-import About from '../../pages/About';
-import Blog from '../../pages/Blog';
+import Dashboard from '../../pages/Dashboard/Dashboard';
+import Packages from '../../pages/Packages/Packages';
+import Less from '../../pages/Less/Less';
 
 const Routes = () => (
   <Router history={browserHistory}>
     <Fragment>
       <Menu />
       <Route exact path="/" component={Dashboard} />
-      <Route path="/about" component={About} />
-      <Route path="/blog" component={Blog} />
+      <Route path="/packages" component={Packages} />
+      <Route path="/less" component={Less} />
     </Fragment>
   </Router>
 );

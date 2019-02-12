@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 const Header = ({ appName }) => (
   <header className="header">
     <div className="header--logo-wrapper">
-      <h1 className="header--logo-title">{ appName }</h1>
+      <a href="/" className="header--logo-title">
+        { appName }
+      </a>
     </div>
   </header>
 );

@@ -29,6 +29,17 @@ module.exports = {
         exclude: /(node_modules)/,
         use: ['babel-loader', 'eslint-loader'],
       },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+          {
+            loader: 'markdown-loader',
+          }
+        ],
+      },
     ],
   },
 
