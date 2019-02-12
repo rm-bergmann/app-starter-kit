@@ -3,12 +3,9 @@ import ReactHtmlParser from 'react-html-parser';
 import dashboardContent from './dashboard.md';
 
 class Dashboard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      markdown: dashboardContent,
-    };
-  }
+  state = {
+    markdown: dashboardContent,
+  };
 
   render() {
     const { markdown } = this.state;

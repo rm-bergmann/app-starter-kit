@@ -12,17 +12,40 @@ below for list of the available mixins for use.
 
 ## Commands:
 
-### $ npm start
-* Runs Webpack-dev-server on port 8080 with a browsersync proxy on port 3000.
+```bash
+$ npm start
+```
+* Runs Webpack-dev-server on port 3000.
 * Updates JS & css on files with hot reload.
 * Use this command for development.
 * File changes are stored in memory
 
-### $ npm run build
+```bash
+$ npm run build
+```
 * Bundles / minifies files for production.
 
-### $ npm test
+```bash
+$ npm test
+```
 * Runs unit tests
+
+```bash
+$ npm run test_watch
+```
+* Runs unit tests in watch mode
+
+```bash
+$ npm run format
+```
+* Formats files with Prettier
+
+```bash
+$ node app.js
+$ nodemon app.js
+```
+* Serves the production build on Port 5000
+* Nodemon should be installed glabally for that command to work
 
 # What's included?:
 
@@ -34,16 +57,17 @@ below for list of the available mixins for use.
 * Used for http requests
 
 ## Webpack Loaders & Plugins:
-* Webpack watch mode
 * Webpack-Dev-Server
 * Babel-loader
 * Less-loader, CSS-loader
 * Post CSS Loader (Used for auto prefixing)
 * UglifyJS
+* HTML & Markdown loaders
 
 ## Testing & Linting
 * Jest
 * ES Lint
+* Prettier
 * [Airbnb Javascript style guide](https://github.com/airbnb/javascript)
 
 ## LESS
@@ -51,4 +75,3 @@ below for list of the available mixins for use.
 I have included my LESS Style library to help with faster CSS developement:
 [More info here](https://github.com/rm-bergmann/less-style-library)
 
-## More Coming Soon. Stay tuned!

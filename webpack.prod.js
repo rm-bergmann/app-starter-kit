@@ -32,7 +32,7 @@ const config = merge(common, {
   plugins: [
 
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: './public/index-build.html',
     }),
     
     new webpack.DefinePlugin({

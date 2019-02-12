@@ -13,16 +13,20 @@ class Blog extends React.Component {
   }
 
   componentDidMount() {
-    const url = 'https://api.github.com/repos/rm-bergmann/less-style-library/contents/README.md';
-    axios.get(url).then((content) => {
-      const component = this;
-      component.setState({
-        content: base64.decode(content.data.content),
-        loading: false,
+    const url =
+      'https://api.github.com/repos/rm-bergmann/less-style-library/contents/README.md';
+    axios
+      .get(url)
+      .then(content => {
+        const component = this;
+        component.setState({
+          content: base64.decode(content.data.content),
+          loading: false,
+        });
+      })
+      .catch(error => {
+        console.log(error);
       });
-    }).catch((error) => {
-      console.log(error);
-    });
   }
 
   render() {
