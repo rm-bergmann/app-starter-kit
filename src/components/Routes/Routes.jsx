@@ -15,7 +15,9 @@ const Routes = () => (
     <Fragment>
       <Header appName="App Starter Kit" />
       <main>
-        <Menu />
+        <aside className="sidebar">
+          <Menu />
+        </aside>
         <Route exact path="/" component={Dashboard} />
         <Route path="/packages" component={Packages} />
         <Route path="/less" component={Less} />
