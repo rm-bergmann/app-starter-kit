@@ -5,7 +5,7 @@ const PUBLIC_DIR = path.resolve(__dirname, 'public');
 module.exports = {
 
   entry: {
-    bundle: ['babel-polyfill', './src/app/index'],
+    bundle: ['babel-polyfill', './src/index'],
   },
 
   output: {
@@ -54,21 +54,4 @@ module.exports = {
       },
     },
   },
-
-  /*
-  plugins: [
-    
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new ManifestPlugin(),
-    
-    new CleanWebpackPlugin([
-      'public/bundles/*.hot-update.*'
-    ]),
-    
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-  ]
-  */
 };

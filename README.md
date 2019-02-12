@@ -8,7 +8,7 @@ below for list of the available mixins for use.
 # Installation:
 * Node & NPM are dependencies so they need to be installed.
 * Clone the project, delete the git files (unless you are contributing to this repo).
-* Install the node_modules with '$ npm install'.
+* Install packages '$ npm install'.
 
 ## Commands:
 
@@ -36,7 +36,6 @@ below for list of the available mixins for use.
 ## Webpack Loaders & Plugins:
 * Webpack watch mode
 * Webpack-Dev-Server
-* Browsersync & HTML Injection
 * Babel-loader
 * Less-loader, CSS-loader
 * Post CSS Loader (Used for auto prefixing)
@@ -51,11 +50,5 @@ below for list of the available mixins for use.
 
 I have included my LESS Style library to help with faster CSS developement:
 [More info here](https://github.com/rm-bergmann/less-style-library)
-
-## Pocketgrid
-PocketGrid is a tiny and flexible grid system which comes with 2 classes 'block-group' for containers and 'block'
-for columns. I have included a mixin for the block elements.
-
-[More info here](http://arnaudleray.github.io/pocketgrid/)
 
 ## More Coming Soon. Stay tuned!
