@@ -7,7 +7,7 @@ const Header = ({ appName }) => (
   <header className="header">
     <div className="header--logo-wrapper">
       <a href="/" className="header--logo-title">
-        { appName }
+        {appName}
       </a>
     </div>
     <div className="header--mobile-menu">
