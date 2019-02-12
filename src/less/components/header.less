@@ -21,6 +21,19 @@
   }
   
   &--mobile-menu {
+    #grid.column(span, 11, 2);
+
+    .menu {
+      display: none;
+    }
+    
+    svg {
+      cursor: pointer;
+      
+      @media @desktop-narrow-min {
+        display: none;
+      }
+    }
 
     @media @desktop-narrow-min {
       display: none;
