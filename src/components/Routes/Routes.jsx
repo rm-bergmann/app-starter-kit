@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
+import About from '../About/About';
 import Dashboard from '../Dashboard/Dashboard';
 import Packages from '../Packages/Packages';
 import Less from '../Less/Less';
@@ -19,6 +20,7 @@ const Routes = () => (
           <Menu />
         </aside>
         <Route exact path="/" component={Dashboard} />
+        <Route path="/about" component={About} />
         <Route path="/packages" component={Packages} />
         <Route path="/less" component={Less} />
       </main>

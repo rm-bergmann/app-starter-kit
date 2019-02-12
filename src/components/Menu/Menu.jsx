@@ -22,6 +22,15 @@ const Menu = () => {
           <NavLink
             className={linkClassName}
             activeClassName={activeClassName}
+            to="/about"
+          >
+            About
+          </NavLink>
+        </li>
+        <li className={itemClassName}>
+          <NavLink
+            className={linkClassName}
+            activeClassName={activeClassName}
             to="/packages"
           >
             Packages

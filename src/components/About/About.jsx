@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import dashboardContent from './dashboard.md';
+import aboutContent from '../../../README.md';
 
 class Dashboard extends Component {
   state = {
-    markdown: dashboardContent,
+    markdown: aboutContent,
   };
 
   render() {
     const { markdown } = this.state;
     return (
-      <div className="content content-dashboard">
-        {ReactHtmlParser(markdown)}
-      </div>
+      <div className="content content-about">{ReactHtmlParser(markdown)}</div>
     );
   }
 }
