@@ -54,21 +54,4 @@ module.exports = {
       },
     },
   },
-
-  /*
-  plugins: [
-    
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new ManifestPlugin(),
-    
-    new CleanWebpackPlugin([
-      'public/bundles/*.hot-update.*'
-    ]),
-    
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-  ]
-  */
 };
