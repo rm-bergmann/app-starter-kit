@@ -59,7 +59,7 @@ $ nodemon app.js
 ## Webpack Loaders & Plugins:
 * Webpack-Dev-Server
 * Babel-loader
-* Less-loader, CSS-loader
+* Less-loader, CSS-loader, style-loader
 * Post CSS Loader (Used for auto prefixing)
 * UglifyJS
 * HTML & Markdown loaders
