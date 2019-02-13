@@ -9,10 +9,6 @@ const ReactDOM = require('react-dom/server');
 
 const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
 
-app.get('*', (req, res, next) => {
-  res.redirect('http://' + req.get('host') + req.url);
-});
-
 app.set('build', `./build`);
 app.use(express.static(`./build`));
 

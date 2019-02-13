@@ -19,7 +19,12 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.less']
+    modules: [path.resolve(__dirname, './src'), 'node_modules'],
+    extensions: ['.js', '.jsx', 'json', '.less'],
+    alias: {
+      less: path.join(__dirname, 'src', 'less'),
+      components: path.join(__dirname, 'src', 'components'),
+    },
   },
 
   module: {

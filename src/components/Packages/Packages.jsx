@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import base64 from 'base-64';
 import axios from 'axios';
 
 class Packages extends Component {
@@ -11,14 +12,19 @@ class Packages extends Component {
   }
 
   componentDidMount() {
+    const url =
+      'https://api.github.com/repos/rm-bergmann/app-starter-kit/contents/package.json';
+
     axios
-      .get('/package.json')
+      .get(url)
       .then(content => {
         const component = this;
+        const packageFile = base64.decode(content.data.content);
+        const parsedPackageFile = JSON.parse(packageFile);
 
         component.setState({
-          dependancies: Object.keys(content.data.dependencies),
-          devDependencies: Object.keys(content.data.devDependencies),
+          dependancies: Object.keys(parsedPackageFile.dependencies),
+          devDependencies: Object.keys(parsedPackageFile.devDependencies),
           loading: false,
         });
       })
@@ -34,11 +40,11 @@ class Packages extends Component {
         <h1>Packages Included:</h1>
         <h2>Dependancies:</h2>
         {dependancies.map(dependancy => (
-          <h3>{dependancy}</h3>
+          <h3 key={dependancy}>{dependancy}</h3>
         ))}
         <h2>Dev Dependancies:</h2>
         {devDependencies.map(devDependancy => (
-          <h3>{devDependancy}</h3>
+          <h3 key={devDependancy}>{devDependancy}</h3>
         ))}
       </div>
     );
