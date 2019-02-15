@@ -38,19 +38,19 @@ const config = merge(common, {
         test: /\.(less|css)$/,
         use: [
           {
-            loader: 'style-loader', // creates style nodes from JS strings
+            loader: 'style-loader',
           },
           {
-            loader: 'css-loader', // translates CSS into CommonJS
+            loader: 'css-loader',
           },
           {
-            loader: 'less-loader', // compiles Less to CSS
+            loader: 'less-loader',
           },
           /*
           { 
             loader: 'text-transform-loader',
             options: {
-              prependText: '@import "./src/less/variables.less"',
+              prependText: '@import "variables.less"',
             }
           },
           */
