@@ -1,4 +1,5 @@
 // Global Import:
+@import '../../node_modules/less-style-library/imports';
 
 // Import Google fonts
 // Must specify .css or webpack throws an error and can't resolve the import.
@@ -18,10 +19,11 @@
 // Import componenets. Eg: Header, Navigation, Footer etc
 @import '../components/Header/header';
 @import '../components/Menu/menu';
-
+@import '../components/Examples/examples';
+@import '../components/Colors/colors';
 
 // Mixins are all namespaced, and declared as functions
 // so that the styles don't print in the stylesheet unless they
 // are called. Call the functions like #namespace.mixin-name(@param-value);
 
-@import '../../node_modules/less-style-library/imports';
+

@@ -4,12 +4,14 @@ import {
   Route,
   browserHistory,
 } from 'react-router-dom';
-import Header from '../Header/Header';
-import Menu from '../Menu/Menu';
-import About from '../About/About';
-import Dashboard from '../Dashboard/Dashboard';
-import Packages from '../Packages/Packages';
-import Less from '../Less/Less';
+import Header from 'components/Header/Header';
+import Menu from 'components/Menu/Menu';
+import About from 'components/About/About';
+import Dashboard from 'components/Dashboard/Dashboard';
+import Packages from 'components/Packages/Packages';
+import Less from 'components/Less/Less';
+import Colors from 'components/Colors/Colors';
+import Examples from 'components/Examples/Examples';
 
 const Routes = () => (
   <Router history={browserHistory}>
@@ -23,6 +25,8 @@ const Routes = () => (
         <Route path="/about" component={About} />
         <Route path="/packages" component={Packages} />
         <Route path="/less" component={Less} />
+        <Route path="/colors" component={Colors} />
+        <Route path="/examples" component={Examples} />
       </main>
     </Fragment>
   </Router>

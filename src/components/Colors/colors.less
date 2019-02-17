@@ -1,0 +1,72 @@
+.content-colors {
+  #display.grid(6, 0, auto, 0);
+
+  &--header {
+    #grid.column(span, 3, 8);
+  }
+
+  &--wrapper {
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  &--block {
+    #shape.square(75px);
+  }
+}
+
+.generate-selector(blue, @blue);
+.generate-selector(blue-light, @blue-light);
+.generate-selector(blue-dark, @blue-dark);
+
+.generate-selector(green, @green);
+.generate-selector(green-light, @green-light);
+.generate-selector(green-dark, @green-dark);
+
+.generate-selector(red, @red);
+.generate-selector(red-light, @red-light);
+.generate-selector(red-dark, @red-dark);
+
+.generate-selector(purple, @purple);
+.generate-selector(purple-light, @purple-light);
+.generate-selector(purple-dark, @purple-dark);
+
+.generate-selector(teal, @teal);
+.generate-selector(teal-light, @teal-light);
+.generate-selector(teal-dark, @teal-dark);
+
+.generate-selector(yellow, @yellow);
+.generate-selector(yellow-light, @yellow-light);
+.generate-selector(yellow-dark, @yellow-dark);
+
+.generate-selector(orange, @orange);
+.generate-selector(orange-light, @orange-light);
+.generate-selector(orange-dark, @orange-dark);
+
+.generate-selector(gray, @gray);
+.generate-selector(gray-light, @gray-light);
+.generate-selector(gray-dark, @gray-dark);
+
+.generate-selector(pink, @pink);
+.generate-selector(pink-light, @pink-light);
+.generate-selector(pink-dark, @pink-dark);
+
+.generate-selector(cyan, @cyan);
+.generate-selector(cyan-light, @cyan-light);
+.generate-selector(cyan-dark, @cyan-dark);
+
+.generate-selector(@color: black, @var: @color) {
+
+  .content-colors {
+
+    &--wrapper---@{color} {
+      color: @var;
+    }
+
+    &--block---@{color} {
+      background-color: @var;
+    }
+  }
+}
