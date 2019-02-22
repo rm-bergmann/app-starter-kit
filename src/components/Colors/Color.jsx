@@ -46,6 +46,7 @@ class Color extends Component {
 
       return (
         <div
+          key={color}
           className={`${baseClassName}--wrapper ${baseClassName}--wrapper---${color}`}
         >
           <p className={`${baseClassName}--title`}>{`@${color}`}</p>
