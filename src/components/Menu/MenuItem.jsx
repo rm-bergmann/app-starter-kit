@@ -3,7 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 class MenuItem extends Component {
   state = {
-    links: ['Dashboard', 'About', 'Packages', 'Less', 'Colors', 'Examples'],
+    links: [
+      'Dashboard',
+      'About',
+      'Packages',
+      'Less',
+      'Colors',
+      'Buttons',
+      'Examples',
+    ],
   };
 
   render() {

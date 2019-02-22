@@ -11,6 +11,7 @@ import Dashboard from 'components/Dashboard/Dashboard';
 import Packages from 'components/Packages/Packages';
 import Less from 'components/Less/Less';
 import Colors from 'components/Colors/Colors';
+import Buttons from 'components/Buttons/Buttons';
 import Examples from 'components/Examples/Examples';
 
 const Routes = () => (
@@ -27,6 +28,7 @@ const Routes = () => (
         <Route path="/less" component={Less} />
         <Route path="/colors" component={Colors} />
         <Route path="/examples" component={Examples} />
+        <Route path="/buttons" component={Buttons} />
       </main>
     </Fragment>
   </Router>
