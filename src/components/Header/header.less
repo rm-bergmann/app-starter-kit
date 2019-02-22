@@ -30,13 +30,18 @@
     svg {
       cursor: pointer;
       
-      @media @desktop-narrow-min {
+      @media @desktop-small-min {
         display: none;
       }
     }
 
-    @media @desktop-narrow-min {
-      display: none;
-    }
+    .hide-desktop();
+  }
+}
+
+
+.hide-desktop() {
+  @media @desktop-small-min {
+    display: none;
   }
 }
