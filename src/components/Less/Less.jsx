@@ -3,14 +3,10 @@ import axios from 'axios';
 import base64 from 'base-64';
 import ReactMarkdown from 'react-markdown';
 
-class Blog extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      content: '',
-    };
-  }
+class Less extends React.Component {
+  state = {
+    content: '',
+  };
 
   componentDidMount() {
     const url =
@@ -39,4 +35,4 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog;
+export default Less;
