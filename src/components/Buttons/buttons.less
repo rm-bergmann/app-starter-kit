@@ -1,0 +1,50 @@
+.content-buttons {
+  
+  a,
+  button {
+    margin-right: 1rem;
+  }
+  
+  &--button {
+
+    &-01 {
+      #button.flat();
+      
+      &---green {
+        #button.flat(@green);
+      }
+    }
+
+    &-02 {
+      #button.flat(rounded);
+      
+      &---red {
+        #button.flat(rounded, @red);
+      }
+    }
+
+    &-03 {
+      #button.flat(round);
+      
+      &---purple {
+        #button.flat(round, @purple);
+      }
+    }
+    
+    &-04 {
+      #button.custom(@teal, white, .8rem, 1.1rem, .4rem);
+      
+      &---gray {
+        #button.custom(#c9c9c9, black, 20px, 16px, 10px);
+      }
+    }
+
+    &-link {
+      #button.link();
+      
+      &---orange {
+        #button.link(@orange, white, 10px, 14px, 4px);
+      }
+    }
+  }
+}
