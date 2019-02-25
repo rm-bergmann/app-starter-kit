@@ -64,7 +64,7 @@
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "less-plugin-lists": "^1.1.2",
-    "less-style-library": "^1.1.5",
+    "less-style-library": "^1.2.0",
     "markdown-loader": "^5.0.0",
     "mini-css-extract-plugin": "^0.5.0",
     "nodemon": "^1.18.10",
