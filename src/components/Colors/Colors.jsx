@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from 'react';
 import ReactHtmlParser from 'react-html-parser';
-import Color from './color';
+import Color from './Color';
 import colorsContent from './colors.md';
 
 class Colors extends Component {
