@@ -14,8 +14,8 @@ const app = express();
 
 const options = {
   router: {
-    'localhost': '127.0.0.1:3000',
-    'app.rickbergmann.com': '127.0.0.1:3000',
+    'localhost': '127.0.0.1:5000',
+    'app.rickbergmann.com': '127.0.0.1:5000',
   }
 };
 
