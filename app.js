@@ -1,13 +1,25 @@
-const path = require('path');
-const express = require('express');
-
-const port = process.env.PORT || 5000;
-const app = express();
-
-const React = require('react');
-const ReactDOM = require('react-dom/server');
+const path      = require('path');
+const express   = require('express');
+const http      = require('http');
+const httpProxy = require('http-proxy');
+const React     = require('react');
+const ReactDOM  = require('react-dom/server');
 
 const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
+
+const port = process.env.PORT || 5000;
+const proxyPort = 80;
+
+const app = express();
+
+const options = {
+  router: {
+    'localhost': '127.0.0.1:3000',
+    'app.rickbergmann.com': '127.0.0.1:3000',
+  }
+};
+
+const proxyServer = httpProxy.createServer(options);
 
 app.set('build', `./build`);
 app.use(express.static(`./build`));
@@ -31,4 +43,7 @@ require('@babel/register')({
 });
 
 app.listen(port);
+proxyServer.listen(proxyPort);
+
 console.log(`server started on port ${port}`);
+console.log(`Proxy listening on port ${proxyPort}`);
