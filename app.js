@@ -7,7 +7,7 @@ const ReactDOM  = require('react-dom/server');
 
 const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 const proxyPort = 7000;
 
 const app = express();
