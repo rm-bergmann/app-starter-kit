@@ -8,7 +8,7 @@ const ReactDOM  = require('react-dom/server');
 const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
 
 const port = process.env.PORT || 5000;
-const proxyPort = 8090;
+const proxyPort = 8099;
 
 const app = express();
 
