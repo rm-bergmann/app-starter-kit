@@ -7,15 +7,15 @@ const ReactDOM  = require('react-dom/server');
 
 const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
 
-const port = process.env.PORT || 6000;
-const proxyPort = 7000;
+const port = process.env.PORT || 1001;
+const proxyPort = 80;
 
 const app = express();
 
 const options = {
   router: {
-    'localhost': '127.0.0.1:5000',
-    'app.rickbergmann.com': '127.0.0.1:5000',
+    'localhost': '127.0.0.1:1001',
+    'app.rickbergmann.com': '127.0.0.1:1001',
   }
 };
 
