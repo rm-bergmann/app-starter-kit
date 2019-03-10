@@ -1,6 +1,19 @@
 .sidebar {
-  #grid.column(1, span 2);
-  background: lighten(@gray-light, 35%);
+  background: lighten(@color-01, 35%);
   height: 100%;
-  padding-top: 4px;
+  grid-area: sidebar;
+  padding: 1rem;
+  
+  a {
+    text-decoration: none;
+    color: @color-01;
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

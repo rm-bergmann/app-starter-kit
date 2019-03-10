@@ -14,14 +14,14 @@ const Routes = () => (
   <Router history={browserHistory}>
     <Fragment>
       <Header appName="App Starter Kit" />
+      <Menu />
       <main>
-        <aside className="sidebar">
-          <Menu />
-        </aside>
         <Route exact path="/" component={Dashboard} />
         <Route path="/about" component={About} />
         <Route path="/packages" component={Packages} />
       </main>
+      <aside className="sidebar">Sidebar content</aside>
+      <footer className="footer">Footer Content</footer>
     </Fragment>
   </Router>
 );
