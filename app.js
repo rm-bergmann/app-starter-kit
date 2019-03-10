@@ -5,21 +5,10 @@ const httpProxy = require('http-proxy');
 const React     = require('react');
 const ReactDOM  = require('react-dom/server');
 
-const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
-
 const port = process.env.PORT || 1001;
-const proxyPort = 80;
-
 const app = express();
 
-const options = {
-  router: {
-    'localhost': '127.0.0.1:1001',
-    'app.rickbergmann.com': '127.0.0.1:1001',
-  }
-};
-
-const proxyServer = httpProxy.createServer(options);
+const IS_PRODUCTION = process.env.ENVIRONMENT === 'production';
 
 app.set('build', `./build`);
 app.use(express.static(`./build`));
@@ -43,7 +32,5 @@ require('@babel/register')({
 });
 
 app.listen(port);
-proxyServer.listen(proxyPort);
 
 console.log(`server started on port ${port}`);
-console.log(`Proxy listening on port ${proxyPort}`);
