@@ -1,4 +1,13 @@
 .menu {
+  grid-area: nav;
+  display: none;
+
+  &---open {
+
+    @media @tablet-small-min {
+      display: block !important;
+    }
+  }
   
   &--list-item-link {
     display: block;

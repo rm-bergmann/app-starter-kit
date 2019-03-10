@@ -1,14 +1,13 @@
 .header {
-  #display.grid();
+  #display.flex(space);
   #display.dimensions(100%, 60px);
   #display.colors(@white, darken(@blue, 40%));
+  #border.solid(bottom, 4px, lighten(@color-02, 50%));
   padding: 20px 0;
+  grid-area: header;
+  align-items: center;
 
   &--logo {
-
-    &-wrapper {
-      #grid.column(span, 1, 6);
-    }
 
     &-title {
       margin: .5rem 0 0 1.2rem;
@@ -21,15 +20,20 @@
   }
   
   &--mobile-menu {
-    #grid.column(span, 11, 2);
+    margin-right: 2rem;
+    
+    button {
+      background: transparent;
+      border: none;
+    }
 
     .menu {
       display: none;
     }
-    
+
     svg {
       cursor: pointer;
-      
+
       @media @desktop-small-min {
         display: none;
       }
