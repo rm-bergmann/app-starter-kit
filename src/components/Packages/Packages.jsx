@@ -36,15 +36,15 @@ class Packages extends Component {
   render() {
     const { dependancies, devDependencies } = this.state;
     return (
-      <div className="content content-about">
+      <div className="content content-packages">
         <h1>Packages Included:</h1>
         <h2>Dependancies:</h2>
         {dependancies.map(dependancy => (
-          <h3 key={dependancy}>{dependancy}</h3>
+          <h5 key={dependancy}>{dependancy}</h5>
         ))}
         <h2>Dev Dependancies:</h2>
         {devDependencies.map(devDependancy => (
-          <h3 key={devDependancy}>{devDependancy}</h3>
+          <h5 key={devDependancy}>{devDependancy}</h5>
         ))}
       </div>
     );

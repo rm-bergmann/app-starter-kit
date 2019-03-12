@@ -1,11 +1,16 @@
 .menu {
   grid-area: nav;
+  background-color: lighten(@gray-light, 35%);
   display: none;
+
+  @media @tablet-small-min {
+    display: block;
+  }
 
   &---open {
 
     @media @tablet-small-min {
-      display: block !important;
+      display: block;
     }
   }
   
