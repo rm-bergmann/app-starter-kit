@@ -5,6 +5,7 @@ import Menu from 'components/Menu/Menu';
 import About from 'components/About/About';
 import Dashboard from 'components/Dashboard/Dashboard';
 import Sidebar from 'components/Sidebar/Sidebar';
+import Footer from 'components/Footer/Footer';
 import Packages from 'components/Packages/Packages';
 
 const Routes = () => (
@@ -18,7 +19,7 @@ const Routes = () => (
         <Route path="/packages" component={Packages} />
       </main>
       <Sidebar />
-      <footer className="footer">Footer Content</footer>
+      <Footer />
     </Fragment>
   </Router>
 );
