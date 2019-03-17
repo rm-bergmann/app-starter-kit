@@ -1,10 +1,15 @@
 # Dashboard
 
-## Thank you for your download!
+#### A custom boilerplate React + Redux App for starting new projects.
+#### This aims to take the hassle out of all the set-up config.
 
-This is my custom boilerplate React App for starting new projects. I have some custom architecture which I find works for me. I have included
-documentation and guidelines for using this package. There is always room for improvement, if you feel something can be improved please
-submit a bug report / feature request on the gthub page. Pull requests welcome.
+By default, this app includes
+
+* Clean, 3 column UI structured in CSS Grid.
+* Browser reset styles
+* 3 routes
+* 'Folder by Feature' directory structure
+* Production build and dev server
 
 ## Reasons to use this package:
 
@@ -26,9 +31,12 @@ submit a bug report / feature request on the gthub page. Pull requests welcome.
 - You want to use other CSS pre-processors
 - You don't want to use React or any other packages listed in the packages section
 
+I have included documentation and guidelines for using this package. There is always room for improvement, if you feel something can be improved please
+submit a bug report / feature request on the gthub page. Pull requests welcome.
+
 ## How to use this package:
 
-If you are reading this, I take it you have cloned the repo and started the dev server.
+If you are reading this, I assume you have cloned the repo and started the dev server?
 If you are building an app, the first thing you will want to do is remove the files that your app doesn't need.
 Remember to delete the .git directory, unless you are contributing to this project.
 

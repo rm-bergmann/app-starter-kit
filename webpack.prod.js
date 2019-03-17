@@ -34,7 +34,7 @@ const config = merge(common, {
     new HtmlWebpackPlugin({
       template: './public/index-build.html',
     }),
-    
+
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
@@ -42,7 +42,7 @@ const config = merge(common, {
     new UglifyJSPlugin({
       sourceMap: true
     }),
-    
+
     new OptimizeCss({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
@@ -53,20 +53,22 @@ const config = merge(common, {
       },
       canPrint: true,
     }),
-    
-    new CleanWebpackPlugin('./build'),
+
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['bundle*.*', '*.html.', 'vendor*.*'],
+    }),
 
     new InlineEnvironmentVariablesPlugin(),
 
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-    
+
     /*
     new ManifestPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
-    */   
+    */
   ],
 
   module: {
