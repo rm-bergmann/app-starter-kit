@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const PUBLIC_DIR = path.resolve(__dirname, 'public');
+const ASSETS_DIR = path.resolve(__dirname, 'img');
 
 module.exports = {
 
@@ -10,8 +11,8 @@ module.exports = {
 
   output: {
     filename: 'bundle.js',
-    path: PUBLIC_DIR + '/bundles/',
-    publicPath: '/bundles/'
+    path: PUBLIC_DIR,
+    publicPath: ASSETS_DIR,
   },
 
   node: {
